@@ -1,0 +1,5833 @@
+﻿{
+  "DataContractVersion": "1.1",
+  "DocumentTypes": [
+    {
+      "DocumentTypeId": "SupplierInvoices.LifeEnvironmentalServices.Invoice",
+      "Group": "Supplier Invoices",
+      "Category": "Life Environmental Services",
+      "Name": "LES Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c0c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.LifeEnvironmentalServices.Invoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#42d6c5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.RBGrant.RBGInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "R B Grant",
+      "Name": "RBG Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RBGrant.RBGInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b8b28d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.SPIELimited.SPIEInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "SPIE Limited",
+      "Name": "SPIE Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fcd98f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b37710"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SPIELimited.SPIEInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber",
+      "Group": "Supplier Invoices",
+      "Category": "Combserve Heating Services Limited",
+      "Name": "Combserve Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b3d552"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CombserveHeatingServicesLimited.InvoiceNumber.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8322cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.TTTesting.TTTInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "TT Testing",
+      "Name": "TTT Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e5c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TTTesting.TTTInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a3bad4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "AFA Fire and Security",
+      "Name": "AFA Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AFAFireandSecurity.AFAInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d59a42"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "JSK Construction Services Ltd",
+      "Name": "JSK Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#4c40ea"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.JSKConstructionServicesLtd.JSKInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Hatrick-Bruce Limited",
+      "Name": "Hatrick-Bruce Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#67c8c6"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Hatrick-BruceLimited.Hatrick-BruceInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "RPS Environmental Management Ltd",
+      "Name": "RPS Environmental Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b259f8"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSEnvironmentalManagementLtd.RPSEnvironmentalInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "HJ Martin Limited",
+      "Name": "HJ Martin Limited Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d6e422"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HJMartinLimited.HJMartinLimitedInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#adaeca"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Goodson Associates",
+      "Name": "Goodson Associates Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d382bb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GoodsonAssociates.GoodsonAssociatesInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d9ba96"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Response BMS",
+      "Name": "Response BMS Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e422cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ResponseBMS.ResponseBMSInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#beaca7"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "M S Fire Protection Ltd",
+      "Name": "M S Fire Protection Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ea57ba"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.MSFireProtectionLtd.MSFireProtectionInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f34284"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Harley Haddow ",
+      "Name": "Harley Haddow Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ea2eaa"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HarleyHaddow.HarleyHaddowInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e7ba52"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Ipsum Drainage Ltd",
+      "Name": "Ipsum Drainage Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c5c542"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.IpsumDrainageLtd.IpsumDrainageInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f9c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "All Sports CM",
+      "Name": "All Sports CM Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AllSportsCM.AllSportsCMInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c922cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "AKP Scotland",
+      "Name": "AKP Scotland Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ed48a9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AKPScotland.AKPScotlandInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8fb6e2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "G Ross Contractors Ltd",
+      "Name": "G Ross Contractors Ltd Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cb74c6"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GRossContractorsLtd.GRossContractorsLtdInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a6b8d2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Rhodar Specialist Enabling Works",
+      "Name": "Rhodar Specialist Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9b42ff"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RhodarSpecialistEnablingWorks.RhodarSpecialistInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#bc9ec9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Kirkton Flooring Ltd",
+      "Name": "Kirkton Flooring Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#bfde22"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KirktonFlooringLtd.KirktonFlooringInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f0c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Clerk of Works Inspection Services Ltd",
+      "Name": "Clerk of Works Inspection Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ClerkofWorksInspectionServicesLtd.ClerkofWorksInspectionInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Carter Ceilings Ltd",
+      "Name": "Carter Ceilings Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e852a8"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CarterCeilingsLtd.CarterCeilingsInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c4c0a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.KONEPLC.KONEPLCInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "KONE PLC",
+      "Name": "KONE PLC Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.KONEPLC.KONEPLCInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#1c70da"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Alba Facilities Services",
+      "Name": "Alba Facilities Services Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f627ca"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AlbaFacilitiesServices.AlbaFacilitiesServicesInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#352ed6"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Environmental Essentials Ltd",
+      "Name": "Environmental Essentials Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.EnvironmentalEssentialsLtd.EnvironmentalEssentialsInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Saltire Roofing and Building Ltd",
+      "Name": "Saltire Roofing Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.SaltireRoofingandBuildingLtd.SaltireRoofingInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c193d4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Zenith Property Conservation ",
+      "Name": "Zenith Property Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cac542"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ZenithPropertyConservation.ZenithPropertyInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#95b2de"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Stax Trade Centre Ltd",
+      "Name": "Stax Trade Centre Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#7652f9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.StaxTradeCentreLtd.StaxTradeCentreInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6d22cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice",
+      "Group": "Supplier Invoices",
+      "Category": "Valtti (Tikkurila) ",
+      "Name": "Valtti (Tikkurila) Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c7c26d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Valtti(Tikkurila).Valtti(Tikkurila)Invoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ca9ea0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Graham UKPS",
+      "Name": "Graham UKPS Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c0c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.GrahamUKPS.GrahamUKPSInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c922cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Taymore Ltd",
+      "Name": "Taymore Ltd Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.TaymoreLtd.TaymoreLtdInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d18a97"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.AtalianServest.AtalianServestInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Atalian Servest ",
+      "Name": "Atalian Servest Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e422cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.AtalianServest.AtalianServestInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "H E Weir and Son",
+      "Name": "H E Weir and Son Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9372b2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fcd98f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b34692"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e652f9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.HEWeirandSon.HEWeirandSonInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cdb7aa"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.Brownriggs.BrownriggsInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Brownriggs",
+      "Name": "Brownriggs Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9372b2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fcd98f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b34692"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#4a6aff"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.Brownriggs.BrownriggsInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ca9ea0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "City Gate Construction",
+      "Name": "City Gate Construction Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fcd98f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b34692"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa38d5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.CityGateConstruction.CityGateConstructionInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8498e0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "P1 Solutions",
+      "Name": "P1 Solutions Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "dd/MM/yyyy",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f544b6"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.P1Solutions.P1SolutionsInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "Express Heating Co Ltd",
+      "Name": "Express Heating Co Ltd Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.VatAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.InvoiceAmount",
+          "FieldName": "InvoiceAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cac342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.ExpressHeatingCoLtd.ExpressHeatingCoLtdInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c0b2aa"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice",
+      "Group": "Supplier Invoices",
+      "Category": "RP Slight & Sons Ltd",
+      "Name": "RP Slight & Sons Ltd Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cdc26d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "SupplierInvoices.RPSlight&SonsLtd.RPSlight&SonsLtdInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "PECOSInvoices.Purdie's.Purdie'sInvoice",
+      "Group": "PECOS Invoices",
+      "Category": "Purdie's",
+      "Name": "Purdie's Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c0c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.Type",
+          "FieldName": "Type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c6ba96"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9cdf42"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice",
+      "Group": "PECOS Invoices",
+      "Category": "Purdie's",
+      "Name": "Purdie's Credit Notice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#e34ac0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.Type",
+          "FieldName": "Type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b26be5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Purdie's.Purdie'sCreditNotice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#991c55"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "PECOSInvoices.Pertemps.PertempsCreditNote",
+      "Group": "PECOS Invoices",
+      "Category": "Pertemps",
+      "Name": "Pertemps Credit Note",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#7652f9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.Type",
+          "FieldName": "Type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ce93d4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsCreditNote.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#1c4ad1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "PECOSInvoices.Pertemps.PertempsInvoice",
+      "Group": "PECOS Invoices",
+      "Category": "Pertemps",
+      "Name": "Pertemps Invoice",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.OrderNumber",
+          "FieldName": "OrderNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.InvoiceNumber",
+          "FieldName": "InvoiceNumber",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.NetAmount",
+          "FieldName": "NetAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.VATAmount",
+          "FieldName": "VATAmount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.InvoiceTotal",
+          "FieldName": "InvoiceTotal",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d5a76d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.Type",
+          "FieldName": "Type",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "PECOSInvoices.Pertemps.PertempsInvoice.InvoiceDate",
+          "FieldName": "InvoiceDate",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#7ab2bb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    }
+  ],
+  "Groups": [
+    {
+      "Name": "Supplier Invoices",
+      "Categories": [
+        "Life Environmental Services",
+        "R B Grant",
+        "SPIE Limited",
+        "Combserve Heating Services Limited",
+        "TT Testing",
+        "AFA Fire and Security",
+        "JSK Construction Services Ltd",
+        "Hatrick-Bruce Limited",
+        "RPS Environmental Management Ltd",
+        "HJ Martin Limited",
+        "Goodson Associates",
+        "Response BMS",
+        "M S Fire Protection Ltd",
+        "Harley Haddow ",
+        "Ipsum Drainage Ltd",
+        "All Sports CM",
+        "AKP Scotland",
+        "G Ross Contractors Ltd",
+        "Rhodar Specialist Enabling Works",
+        "Kirkton Flooring Ltd",
+        "Clerk of Works Inspection Services Ltd",
+        "Carter Ceilings Ltd",
+        "KONE PLC",
+        "Alba Facilities Services",
+        "Environmental Essentials Ltd",
+        "Saltire Roofing and Building Ltd",
+        "Zenith Property Conservation ",
+        "Stax Trade Centre Ltd",
+        "Valtti (Tikkurila) ",
+        "Graham UKPS",
+        "Taymore Ltd",
+        "Atalian Servest ",
+        "H E Weir and Son",
+        "Brownriggs",
+        "City Gate Construction",
+        "P1 Solutions",
+        "Express Heating Co Ltd",
+        "RP Slight & Sons Ltd"
+      ]
+    },
+    {
+      "Name": "PECOS Invoices",
+      "Categories": [
+        "Purdie's",
+        "Pertemps"
+      ]
+    }
+  ],
+  "SupportedLanguages": [
+    {
+      "Name": "Undetermined Language",
+      "Code": "und"
+    },
+    {
+      "Name": "Bulgarian",
+      "Code": "bul"
+    },
+    {
+      "Name": "Cantonese",
+      "Code": "yue"
+    },
+    {
+      "Name": "Danish",
+      "Code": "dan"
+    },
+    {
+      "Name": "Dutch",
+      "Code": "nld"
+    },
+    {
+      "Name": "English",
+      "Code": "eng"
+    },
+    {
+      "Name": "French",
+      "Code": "fra"
+    },
+    {
+      "Name": "Georgian",
+      "Code": "kat"
+    },
+    {
+      "Name": "German",
+      "Code": "deu"
+    },
+    {
+      "Name": "Greek",
+      "Code": "ell"
+    },
+    {
+      "Name": "Hebrew",
+      "Code": "heb"
+    },
+    {
+      "Name": "Hindi",
+      "Code": "hin"
+    },
+    {
+      "Name": "Italian",
+      "Code": "ita"
+    },
+    {
+      "Name": "Japanese",
+      "Code": "jpn"
+    },
+    {
+      "Name": "Korean",
+      "Code": "kor"
+    },
+    {
+      "Name": "Macedonian",
+      "Code": "mkd"
+    },
+    {
+      "Name": "Mandarin",
+      "Code": "zho"
+    },
+    {
+      "Name": "Marathi",
+      "Code": "mar"
+    },
+    {
+      "Name": "Norwegian",
+      "Code": "nor"
+    },
+    {
+      "Name": "Polish",
+      "Code": "pol"
+    },
+    {
+      "Name": "Portuguese",
+      "Code": "por"
+    },
+    {
+      "Name": "Romanian",
+      "Code": "ron"
+    },
+    {
+      "Name": "Russian",
+      "Code": "rus"
+    },
+    {
+      "Name": "Serbian",
+      "Code": "srp"
+    },
+    {
+      "Name": "Spanish",
+      "Code": "spa"
+    },
+    {
+      "Name": "Swedish",
+      "Code": "swe"
+    },
+    {
+      "Name": "Telugu",
+      "Code": "tel"
+    }
+  ]
+}
