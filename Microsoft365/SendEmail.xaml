@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,2172</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154,2547</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Test_GetEmailByAttachmentName_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="98">
@@ -59,6 +59,9 @@
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
       <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -128,7 +131,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Send Run Summary Email" DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="668,2107" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Send Run Summary Email" DisplayName="SendEmail" sap:VirtualizedContainerService.HintSize="766,2482" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EmailAccount" />
       <Variable x:TypeArguments="x:String" Name="emailFilters" />
@@ -144,7 +147,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset AssetName="Office365_Email_Account_PECOSInvoicing" CacheStrategy="None" DisplayName="Get Asset - Email Account" sap:VirtualizedContainerService.HintSize="606,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset AssetName="Office365_Email_Account_PECOSInvoicing" CacheStrategy="None" DisplayName="Get Asset - Email Account" sap:VirtualizedContainerService.HintSize="704,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
@@ -152,7 +155,7 @@
         <OutArgument x:TypeArguments="x:String">[EmailAccount]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <ui:GetRobotCredential AssetName="Office365_Password" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="606,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[EmailPwd]">
+    <ui:GetRobotCredential AssetName="Office365_Password" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="704,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[EmailPwd]">
       <ui:GetRobotCredential.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotCredential.TimeoutMS>
@@ -160,15 +163,15 @@
         <OutArgument x:TypeArguments="x:String" />
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <If Condition="[EmailAccount = &quot;.&quot;]" DisplayName="If - Account is Blank" sap:VirtualizedContainerService.HintSize="606,1345" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[EmailAccount = &quot;.&quot;]" DisplayName="If - Account is Blank" sap:VirtualizedContainerService.HintSize="704,1720" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,302" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,301" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign - Empty Asset" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign DisplayName="Assign - Empty Asset" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[EmailAccount]</OutArgument>
             </Assign.To>
@@ -182,41 +185,61 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="572,861" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="670,1237" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Email Asset" sap:VirtualizedContainerService.HintSize="530,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Account Asset: &quot; + EmailAccount]" />
-          <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" OAuth2Username="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" ApplicationId="[in_Office365_ApplicationID]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="530,641" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_2" OAuthApplication="UiPath" SecureApplicationSecret="[in_Office365_ApplicationSecretValue]" Services="Mail" Tenant="[in_Office365_TenantID]">
+          <ui:LogMessage DisplayName="Log Message - Email Asset" sap:VirtualizedContainerService.HintSize="628,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Account Asset: &quot; + EmailAccount]" />
+          <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" OAuth2Username="{x:Null}" Password="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" ApplicationId="[in_Office365_ApplicationID]" AuthenticationType="ApplicationIdAndSecret" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="628,1017" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_2" OAuthApplication="UiPath" SecureApplicationSecret="[in_Office365_ApplicationSecretValue]" Services="Mail" Tenant="[in_Office365_TenantID]">
             <uma:Office365ApplicationScope.Body>
               <ActivityAction x:TypeArguments="mg:GraphServiceClient">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,554" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="594,930" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umam:SendMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ReplyTo="{x:Null}" Body="[&quot;Hi,&#xD;&#xA;&#xD;&#xA;This process had just run - please find the Run Summary Attached.&#xD;&#xA;&#xD;&#xA;Kind Regards,&quot; + Environment.MachineName]" DisplayName="Send Mail" From="automation@westlothian.gov.uk" sap:VirtualizedContainerService.HintSize="434,351" sap2010:WorkflowViewState.IdRef="SendMail_1" Importance="Normal" IsBodyHTML="False" IsDraft="False" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - Run Summary&quot;]" To="[{&quot;kian.mackay@westlothian.gov.uk&quot;}]">
-                    <umam:SendMail.Attachments>
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xD;&#xA;&#xD;&#xA;This process had just run - please find the Run Summary Attached.&#xD;&#xA;&#xD;&#xA;Kind Regards,&#xD;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="532,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - Run Summary&quot;]" To="kian.mackay@westlothian.gov.uk;">
+                    <ui:SendOutlookMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                        <InArgument x:TypeArguments="x:String">C:\VKY\PECOS Invoices\RunSummary.csv</InArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String">C:\VKY\PECOS Invoices\RunSummary.csv</Literal>
+                        </InArgument>
                       </scg:List>
-                    </umam:SendMail.Attachments>
-                  </umam:SendMail>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,541" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="472,646" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,462" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ForEach x:TypeArguments="umm:Office365Message" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410,535" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[out_emails]">
+                        <umam:SendMail Account="{x:Null}" AttachmentsCollection="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" ReplyTo="{x:Null}" Body="[&quot;Hi,&#xD;&#xA;&#xD;&#xA;This process had just run - please find the Run Summary Attached.&#xD;&#xA;&#xD;&#xA;Kind Regards,&quot; + Environment.MachineName]" DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="434,351" sap2010:WorkflowViewState.IdRef="SendMail_1" Importance="Normal" IsBodyHTML="False" IsDraft="False" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - Run Summary&quot;]" To="[{&quot;svc-ccuibot1@westlothian.gov.uk&quot;}]">
+                          <umam:SendMail.Attachments>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">C:\VKY\PECOS Invoices\RunSummary.csv</InArgument>
+                            </scg:List>
+                          </umam:SendMail.Attachments>
+                        </umam:SendMail>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                  </ui:CommentOut>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,319" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEach x:TypeArguments="umm:Office365Message" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[out_emails]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="umm:Office365Message">
                               <ActivityAction.Argument>
@@ -250,7 +273,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Assign DisplayName="Assign - Email Count" sap:VirtualizedContainerService.HintSize="606,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Assign - Email Count" sap:VirtualizedContainerService.HintSize="704,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[EmailCounts]</OutArgument>
       </Assign.To>

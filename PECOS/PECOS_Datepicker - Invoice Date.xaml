@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,1607</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154,1660</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -72,9 +72,11 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="493,1542" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="485,1595" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DatePickerMonthCorrect" />
       <Variable x:TypeArguments="x:String" Name="DatepickerMonthText" />
@@ -94,8 +96,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,90" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;User input the date &quot;+IN_Date.ToString]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="423,90" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;User input the date &quot;+IN_Date.ToString]" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -123,7 +125,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="095f03e5-c03c-4e4e-9d93-d97aac7498a5" InformativeScreenshot="22b3959588f5476e3ba26e664c67e9b3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='2' role='pane' /&gt;">
           <ui:Target.TimeoutMS>
@@ -141,7 +143,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:UiElementExists>
-    <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'grouping'" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[DatePickerMonthCorrect]" Text="April 2023">
+    <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'grouping'" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[DatePickerMonthCorrect]" Text="April 2023">
       <ui:TextExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee01439-05c1-4fae-bfc1-5e2b17b4e942" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
           <ui:Target.TimeoutMS>
@@ -159,7 +161,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:TextExists>
-    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'grouping'" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="GetValue_1">
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'grouping'" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="GetValue_1">
       <ui:GetValue.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2aebccb9-2168-47e8-a721-041242480855" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
           <ui:Target.TimeoutMS>
@@ -180,7 +182,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:GetValue>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Input Year: &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;yyyy&quot;) + &quot;,  Current Datepicker Year:  &quot;+ Convert.ToDateTime(DatepickerMonthText).ToString(&quot;yyyy&quot;)]">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Input Year: &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;yyyy&quot;) + &quot;,  Current Datepicker Year:  &quot;+ Convert.ToDateTime(DatepickerMonthText).ToString(&quot;yyyy&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -188,7 +190,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -196,7 +198,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,287" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,287" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -264,7 +266,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <If Condition="[Sub_Year = 0]" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Sub_Year = 0]" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -272,14 +274,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,298" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,274" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="338,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Do nothing - Year is correct" />
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Do nothing - Year is correct" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Do nothing - Year is correct" />
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Do nothing - Year is correct" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -435,7 +437,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Sub_Month = 0]" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Sub_Month = 0]" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -443,14 +445,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,298" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,274" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="338,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Do nothing - Month is correct" />
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Do nothing - Month is correct" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_5" Text="Do nothing - Month is correct" />
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="Do nothing - Month is correct" />
         </Sequence>
       </If.Then>
       <If.Else>
@@ -605,7 +607,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Datepicker now on correct Year and Month">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Datepicker now on correct Year and Month">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -613,7 +615,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  20'" sap:VirtualizedContainerService.HintSize="338,53" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  20'" sap:VirtualizedContainerService.HintSize="423,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -636,12 +638,12 @@
       </ui:Click.Target>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,53" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Date selected">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="423,52" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Date selected">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
