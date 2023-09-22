@@ -6,6 +6,7 @@
     "Newtonsoft.Json": "[13.0.3]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.21.1]",
     "UiPath.Excel.Activities": "[2.20.1]",
+    "UiPath.Form.Activities": "[23.8.0-preview]",
     "UiPath.FormActivityLibrary": "[2.0.5]",
     "UiPath.FormActivityLibrary.Contracts": "[2.0.5]",
     "UiPath.IntelligentOCR.Activities": "[6.9.1]",
@@ -14,7 +15,7 @@
     "UiPath.OCR.Activities": "[3.15.1]",
     "UiPath.OmniPage.Activities": "[1.15.0]",
     "UiPath.PDF.Activities": "[3.14.0]",
-    "UiPath.Persistence.Activities": "[1.4.4]",
+    "UiPath.Persistence.Activities": "[1.4.6]",
     "UiPath.System.Activities": "[23.4.2]",
     "UiPath.Testing.Activities": "[23.4.0]",
     "UiPath.UIAutomation.Activities": "[23.4.5]",
@@ -105,6 +106,18 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "36c03069-e173-4ed8-afc6-9f9c574ee102",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Tests\\TestMain.xaml",
+      "uniqueId": "79a4029d-d582-4b9a-8c90-3c6b016ce640",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PECOS\\PECOS_Login.xaml",
+      "uniqueId": "f0a06603-6856-4d8c-b7a1-62dcb127ac83",
       "input": [],
       "output": []
     }

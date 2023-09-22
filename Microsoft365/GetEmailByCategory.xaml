@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1154,2195</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1794,2195</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Test_GetEmailByAttachmentName_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -227,7 +227,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="True" Filter=".*(.pdf)" FolderPath="C:\VKY\PECOS Invoices\To Be Processed" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[item]" OverwriteExisting="False" />
+                    <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="True" Filter=".*(.pdf|.PDF)" FolderPath="C:\VKY\PECOS Invoices\To Be Processed" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[item]" OverwriteExisting="False" />
                     <umam:MoveMail Account="svc-ccuibot1@westlothian.gov.uk" DestinationFolderName="Inbox\PECOS E-Invoicing\Processed" DisplayName="Move Mail" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[item]" />
                   </Sequence>
                 </ActivityAction>

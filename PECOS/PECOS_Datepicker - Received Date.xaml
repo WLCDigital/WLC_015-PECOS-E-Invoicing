@@ -1,11 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="PECOS_Datepicker" this:PECOS_Datepicker.IN_Date="[Now()]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PECOS_Datepicker" this:PECOS_Datepicker.IN_Date="[Now()]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IN_Date" Type="InArgument(s:DateTime)" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1154,2295</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154,9138</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -36,10 +37,22 @@
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -74,9 +87,36 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="493,2230" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="746,9073" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DatePickerMonthCorrect" />
       <Variable x:TypeArguments="x:String" Name="DatepickerMonthText" />
@@ -90,14 +130,18 @@
       <Variable x:TypeArguments="x:Int32" Name="IN_Day" />
       <Variable x:TypeArguments="ui:UiElement" Name="Day_Button" />
       <Variable x:TypeArguments="x:Int32" Name="index_tab" />
+      <Variable x:TypeArguments="sd:Image" Name="Image" />
+      <Variable x:TypeArguments="x:Int32" Name="int_index" />
+      <Variable x:TypeArguments="s:String[]" Name="arr_CalendarTextArray" />
+      <Variable x:TypeArguments="x:String" Name="str_CalendarText" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,90" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;User input the date &quot;+IN_Date.ToString]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="431,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,90" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[&quot;User input the date &quot;+IN_Date.ToString]" />
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="684,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -125,7 +169,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="431,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'pane'" sap:VirtualizedContainerService.HintSize="684,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="095f03e5-c03c-4e4e-9d93-d97aac7498a5" InformativeScreenshot="22b3959588f5476e3ba26e664c67e9b3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
           <ui:Target.TimeoutMS>
@@ -143,46 +187,304 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:UiElementExists>
-    <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'grouping'" sap:VirtualizedContainerService.HintSize="431,135" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[DatePickerMonthCorrect]" Text="April 2023">
-      <ui:TextExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee01439-05c1-4fae-bfc1-5e2b17b4e942" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,393" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'grouping'" sap:VirtualizedContainerService.HintSize="388,135" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Result="[DatePickerMonthCorrect]" Text="[Now.ToString(&quot;MMMM yyyy&quot;)]">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ee01439-05c1-4fae-bfc1-5e2b17b4e942" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TextExists.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:TextExists>
+          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'grouping'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
+            <ui:GetValue.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2aebccb9-2168-47e8-a721-041242480855" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:GetValue.Target>
+            <ui:GetValue.Value>
+              <OutArgument x:TypeArguments="x:String">[DatepickerMonthText]</OutArgument>
+            </ui:GetValue.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:GetValue>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7b1e31f4-839a-4751-8acc-fb32c85f083e" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="684,561" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
+            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (103,11,100,15)&quot; +&#xA;&quot;Anchor: Text 'We' (145,49,16,9)&quot;]" DesignTimeCacheId="7b1e31f4-839a-4751-8acc-fb32c85f083e" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="165d28b8570bd7091a4b23c25bb12dec" NumberOfScrolls="2" RefreshBefore="True" Result="[DatepickerMonthText]" ScrollDirection="None" Version="V6">
+              <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="059f5b56-9b3f-492e-857b-9179d58ffb54">
+                  <uc:CvDescriptor.Anchors>
+                    <x:Array Type="uc:CvElementDescriptor">
+                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="145, 49, 16, 9" ElementType="Text" Text="We" />
+                    </x:Array>
+                  </uc:CvDescriptor.Anchors>
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="103, 11, 100, 15" ElementType="AnyWordGroup" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+            </p:CvGetTextWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - '' (Main)" Id="7b1e31f4-839a-4751-8acc-fb32c85f083e" InformativeScreenshot="ddf137c3bd6320714ebbc2411a32f7f3" LogicalPosition="208, 266" OcrText="1&lt; &lt; February 2023 &gt; &gt;1&#xA;Su Mo Tu We Th Fr Sa&#xA;29 30 31 1 2 3 4&#xA;5 6 7 8 9 10 11&#xA;12 13 14 ID 16 17 18&#xA;19 20 21 22 23 24 25&#xA;26 27 28 1 2 3 4" Position="208, 266" ScreenshotGuid="4befc987-cef2-4517-8e5c-8f89853c8522" ServerVersion="1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                    <uc:CvElementInfo Category="Icon" Region="28, 5, 23, 22" />
+                    <uc:CvElementInfo Category="Icon" Region="255, 6, 21, 21" />
+                    <uc:CvElementInfo Category="Cell" Region="98, 34, 39, 33" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="28, 5, 23, 21" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="134, 140, 38, 36" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="24, 0, 260, 35" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="62, 7, 17, 18" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="227, 6, 17, 19" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="255, 6, 21, 21" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="28, 5, 24, 23" />
+                    <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="254, 5, 23, 22" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="255, 5, 21, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="247, 108, 55, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="52, 219, 49, 85" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 32, 38, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="101, 110, 36, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="61, 32, 35, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="215, 148, 35, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="242, 186, 62, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="99, 219, 44, 85" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="204, 185, 46, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="3, 187, 74, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="52, 185, 47, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="102, 134, 29, 46" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="62, 108, 29, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="217, 110, 36, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="181, 69, 34, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="63, 147, 40, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="95, 185, 39, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="51, 148, 38, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="132, 216, 45, 87" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="102, 220, 35, 27" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="244, 143, 58, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="207, 34, 42, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="180, 108, 34, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="252, 34, 29, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="229, 211, 75, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="102, 184, 22, 33" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="177, 140, 35, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="216, 72, 27, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="226, 128, 78, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="92, 187, 96, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="140, 110, 37, 32" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="217, 186, 22, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="25, 222, 42, 16" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="253, 128, 51, 19" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="249, 183, 54, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="14, 109, 72, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="179, 185, 22, 27" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="204, 109, 34, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="0, 221, 53, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="130, 135, 44, 48" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="220, 219, 36, 27" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="163, 216, 47, 87" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="9, 220, 54, 84" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="95, 222, 34, 17" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="52, 180, 34, 32" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="172, 108, 30, 33" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="61, 220, 35, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="200, 217, 47, 86" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="101, 206, 22, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="273, 222, 31, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="260, 215, 43, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="213, 196, 89, 106" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="180, 187, 88, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="246, 165, 58, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="70, 104, 31, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="83, 181, 20, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="83, 220, 20, 20" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="20, 148, 44, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="62, 136, 32, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="24, 186, 34, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="53, 222, 35, 15" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="233, 223, 69, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="127, 181, 46, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="55, 116, 42, 67" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="251, 72, 31, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="85, 221, 31, 17" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 71, 45, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="206, 69, 31, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="234, 182, 21, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="42, 107, 24, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="168, 184, 45, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="251, 221, 43, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="249, 83, 50, 25" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="209, 73, 76, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="142, 69, 36, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="266, 168, 37, 31" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="244, 183, 33, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="292, 222, 12, 20" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="45, 183, 20, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="205, 144, 34, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="280, 150, 24, 33" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="279, 184, 25, 27" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="181, 219, 36, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="44, 222, 29, 16" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="277, 144, 27, 19" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="94, 183, 35, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="217, 206, 20, 17" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="195, 35, 22, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="104, 182, 35, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="122, 142, 96, 44" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="24, 110, 33, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="82, 197, 17, 23" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="242, 101, 63, 33" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="21, 3, 258, 31" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="227, 6, 18, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="61, 6, 18, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="254, 5, 22, 21" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="28, 4, 22, 23" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="48">
+                    <uc:OcrTextInfo Region="34, 10, 12, 12" Text="1&lt;" />
+                    <uc:OcrTextInfo Region="68, 10, 6, 12" Text="&lt;" />
+                    <uc:OcrTextInfo Region="103, 11, 61, 15" Text="February" />
+                    <uc:OcrTextInfo Region="169, 11, 34, 12" Text="2023" />
+                    <uc:OcrTextInfo Region="232, 10, 7, 12" Text="&gt;" />
+                    <uc:OcrTextInfo Region="260, 10, 12, 12" Text="&gt;1" />
+                    <uc:OcrTextInfo Region="33, 49, 12, 9" Text="Su" />
+                    <uc:OcrTextInfo Region="69, 49, 16, 9" Text="Mo" />
+                    <uc:OcrTextInfo Region="109, 49, 12, 9" Text="Tu" />
+                    <uc:OcrTextInfo Region="145, 49, 16, 9" Text="We" />
+                    <uc:OcrTextInfo Region="184, 49, 14, 9" Text="Th" />
+                    <uc:OcrTextInfo Region="225, 49, 10, 9" Text="Fr" />
+                    <uc:OcrTextInfo Region="261, 49, 12, 9" Text="Sa" />
+                    <uc:OcrTextInfo Region="33, 78, 12, 9" Text="29" />
+                    <uc:OcrTextInfo Region="71, 78, 12, 9" Text="30" />
+                    <uc:OcrTextInfo Region="109, 78, 10, 9" Text="31" />
+                    <uc:OcrTextInfo Region="150, 78, 4, 9" Text="1" />
+                    <uc:OcrTextInfo Region="188, 78, 6, 9" Text="2" />
+                    <uc:OcrTextInfo Region="226, 78, 6, 9" Text="3" />
+                    <uc:OcrTextInfo Region="264, 78, 6, 9" Text="4" />
+                    <uc:OcrTextInfo Region="36, 116, 6, 9" Text="5" />
+                    <uc:OcrTextInfo Region="74, 116, 6, 9" Text="6" />
+                    <uc:OcrTextInfo Region="112, 116, 6, 9" Text="7" />
+                    <uc:OcrTextInfo Region="150, 116, 6, 9" Text="8" />
+                    <uc:OcrTextInfo Region="188, 116, 6, 9" Text="9" />
+                    <uc:OcrTextInfo Region="223, 116, 13, 9" Text="10" />
+                    <uc:OcrTextInfo Region="261, 116, 11, 9" Text="11" />
+                    <uc:OcrTextInfo Region="33, 154, 13, 9" Text="12" />
+                    <uc:OcrTextInfo Region="71, 154, 13, 9" Text="13" />
+                    <uc:OcrTextInfo Region="109, 154, 13, 9" Text="14" />
+                    <uc:OcrTextInfo Region="137, 143, 32, 32" Text="ID" />
+                    <uc:OcrTextInfo Region="185, 154, 13, 9" Text="16" />
+                    <uc:OcrTextInfo Region="223, 154, 13, 9" Text="17" />
+                    <uc:OcrTextInfo Region="261, 154, 13, 9" Text="18" />
+                    <uc:OcrTextInfo Region="33, 192, 13, 9" Text="19" />
+                    <uc:OcrTextInfo Region="71, 192, 13, 9" Text="20" />
+                    <uc:OcrTextInfo Region="109, 192, 11, 9" Text="21" />
+                    <uc:OcrTextInfo Region="147, 192, 13, 9" Text="22" />
+                    <uc:OcrTextInfo Region="185, 192, 13, 9" Text="23" />
+                    <uc:OcrTextInfo Region="223, 192, 13, 9" Text="24" />
+                    <uc:OcrTextInfo Region="261, 192, 13, 9" Text="25" />
+                    <uc:OcrTextInfo Region="33, 230, 13, 9" Text="26" />
+                    <uc:OcrTextInfo Region="71, 230, 13, 9" Text="27" />
+                    <uc:OcrTextInfo Region="108, 230, 13, 9" Text="28" />
+                    <uc:OcrTextInfo Region="151, 230, 3, 9" Text="1" />
+                    <uc:OcrTextInfo Region="188, 230, 6, 9" Text="2" />
+                    <uc:OcrTextInfo Region="226, 230, 6, 9" Text="3" />
+                    <uc:OcrTextInfo Region="264, 230, 7, 9" Text="4" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <uoa:OmniPageOCR Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" BundleType="Basic" ComputeSkewAngle="False" DisplayName="OmniPage OCR" ExtractHandprintedText="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="OmniPageOCR_1" Image="[Image]" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4c13eca-033a-4ee4-b673-b919fb1645d7" InformativeScreenshot="cbc8baeac8c35f1d1a74d7922803f23d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:TextExists.Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+    </p:CVScope>
+    <Assign sap:VirtualizedContainerService.HintSize="684,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[DatepickerMonthText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Now.ToString("MMMM yyyy")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Input Year: &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;yyyy&quot;) + &quot;,  Current Datepicker Year:  &quot;+ Convert.ToDateTime(DatepickerMonthText).ToString(&quot;yyyy&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:TextExists>
-    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'grouping'" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="GetValue_1">
-      <ui:GetValue.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2aebccb9-2168-47e8-a721-041242480855" InformativeScreenshot="42ed71ae7cc0557c3d44f38e52829bdc" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;">
-          <ui:Target.TimeoutMS>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:Target.TimeoutMS>
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:GetValue.Target>
-      <ui:GetValue.Value>
-        <OutArgument x:TypeArguments="x:String">[DatepickerMonthText]</OutArgument>
-      </ui:GetValue.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:GetValue>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Input Year: &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;yyyy&quot;) + &quot;,  Current Datepicker Year:  &quot;+ Convert.ToDateTime(DatepickerMonthText).ToString(&quot;yyyy&quot;)]">
+    </WriteLine>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,52" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -190,15 +492,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </WriteLine>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,287" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="684,287" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -266,7 +560,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <If Condition="[Sub_Year = 0]" sap:VirtualizedContainerService.HintSize="431,456" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Sub_Year = 0]" sap:VirtualizedContainerService.HintSize="684,536" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -285,40 +579,40 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
+        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="576,91" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Year is not correct - will need to move left or right" />
-          <ui:Comment sap:VirtualizedContainerService.HintSize="576,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Year is not correct - will need to move left or right" />
-          <If Condition="[Sub_Year &gt; 0]" sap:VirtualizedContainerService.HintSize="576,53" sap2010:WorkflowViewState.IdRef="If_3">
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="608,90" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Year is not correct - will need to move left or right" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="608,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="Year is not correct - will need to move left or right" />
+          <If Condition="[Sub_Year &gt; 0]" sap:VirtualizedContainerService.HintSize="608,1231" sap2010:WorkflowViewState.IdRef="If_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="498,971" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence sap:VirtualizedContainerService.HintSize="574,969" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,90" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Year is older than current one shown on datepicker - move left" />
-                <ui:Comment sap:VirtualizedContainerService.HintSize="436,75" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Year is older than current one shown on datepicker - move left" />
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Year &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="436,615" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="532,90" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Year is older than current one shown on datepicker - move left" />
+                <ui:Comment sap:VirtualizedContainerService.HintSize="532,75" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Year is older than current one shown on datepicker - move left" />
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Year &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="532,636" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,449" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,470" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -330,7 +624,7 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="17272e25429ef78f1352ac27364d5071" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month January 2023 next month next year' role='cell' /&gt;&lt;ctrl name='previous year' role='link' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="17272e25429ef78f1352ac27364d5071" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -340,8 +634,8 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Moving left 1 year" />
-                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Moving left 1 year" />
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[Sub_Year]</OutArgument>
                         </Assign.To>
@@ -355,7 +649,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -364,7 +658,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[Sub_Year &lt; 0]" sap:VirtualizedContainerService.HintSize="576,1258" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[Sub_Year &lt; 0]" sap:VirtualizedContainerService.HintSize="608,1230" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -372,23 +666,23 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="498,975" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence sap:VirtualizedContainerService.HintSize="574,968" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Year is younger than current one shown on datepicker - move right" />
-                <ui:Comment sap:VirtualizedContainerService.HintSize="436,75" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Year is younger than current one shown on datepicker - move right" />
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Year &lt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="436,618" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="532,90" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Year is younger than current one shown on datepicker - move right" />
+                <ui:Comment sap:VirtualizedContainerService.HintSize="532,75" sap2010:WorkflowViewState.IdRef="Comment_4" Text="Year is younger than current one shown on datepicker - move right" />
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Year &lt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="532,635" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,450" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,469" sap2010:WorkflowViewState.IdRef="Sequence_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -400,7 +694,7 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="2179962022e8828fea68c9249acaa6b3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl name='next year' role='link' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="2179962022e8828fea68c9249acaa6b3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -410,8 +704,8 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Moving right 1 year" />
-                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Moving right 1 year" />
+                      <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[Sub_Year]</OutArgument>
                         </Assign.To>
@@ -425,7 +719,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -437,10 +731,10 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[Sub_Month = 0]" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[Sub_Month = 0]" sap:VirtualizedContainerService.HintSize="684,3291" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -456,15 +750,15 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="638,2913" sap2010:WorkflowViewState.IdRef="Sequence_17">
+        <Sequence sap:VirtualizedContainerService.HintSize="650,2835" sap2010:WorkflowViewState.IdRef="Sequence_17">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="576,91" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="Month is not correct - will need to move left or right" />
-          <ui:Comment sap:VirtualizedContainerService.HintSize="576,75" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Month is not correct - will need to move left or right" />
-          <If Condition="[Sub_Month &gt; 0]" sap:VirtualizedContainerService.HintSize="576,1258" sap2010:WorkflowViewState.IdRef="If_5">
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="608,90" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="Month is not correct - will need to move left or right" />
+          <ui:Comment sap:VirtualizedContainerService.HintSize="608,75" sap2010:WorkflowViewState.IdRef="Comment_6" Text="Month is not correct - will need to move left or right" />
+          <If Condition="[Sub_Month &gt; 0]" sap:VirtualizedContainerService.HintSize="608,1231" sap2010:WorkflowViewState.IdRef="If_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -472,23 +766,23 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="498,975" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence sap:VirtualizedContainerService.HintSize="574,969" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="Month is older than current one shown on datepicker - move left" />
-                <ui:Comment sap:VirtualizedContainerService.HintSize="436,75" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Month is older than current one shown on datepicker - move left" />
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="436,618" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="532,90" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="Month is older than current one shown on datepicker - move left" />
+                <ui:Comment sap:VirtualizedContainerService.HintSize="532,75" sap2010:WorkflowViewState.IdRef="Comment_7" Text="Month is older than current one shown on datepicker - move left" />
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="532,636" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,450" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,470" sap2010:WorkflowViewState.IdRef="Sequence_11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -500,7 +794,10 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="20d2fe86b0f6e5a66017ea11b3643b17" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl name='previous month' role='link' /&gt;">
+                          <ui:Target Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="b153939d6b976ae4fedb047268900e4d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;">
+                            <ui:Target.ClippingRegion>
+                              <ui:Region Rectangle="58, 7, 30, 20" />
+                            </ui:Target.ClippingRegion>
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -509,9 +806,15 @@
                             </ui:Target.WaitForReady>
                           </ui:Target>
                         </ui:Click.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:Click>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Moving left 1 month" />
-                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="Moving left 1 month" />
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[Sub_Month]</OutArgument>
                         </Assign.To>
@@ -525,7 +828,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -534,7 +837,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[Sub_Month &lt; 0]" sap:VirtualizedContainerService.HintSize="576,1258" sap2010:WorkflowViewState.IdRef="If_6">
+          <If Condition="[Sub_Month &lt; 0]" sap:VirtualizedContainerService.HintSize="608,1231" sap2010:WorkflowViewState.IdRef="If_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -542,23 +845,23 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="498,975" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence sap:VirtualizedContainerService.HintSize="574,969" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Month is younger than current one shown on datepicker - move right" />
-                <ui:Comment sap:VirtualizedContainerService.HintSize="436,75" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Month is younger than current one shown on datepicker - move right" />
-                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Month &lt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="436,618" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="532,90" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="Month is younger than current one shown on datepicker - move right" />
+                <ui:Comment sap:VirtualizedContainerService.HintSize="532,75" sap2010:WorkflowViewState.IdRef="Comment_8" Text="Month is younger than current one shown on datepicker - move right" />
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Sub_Month &lt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="532,636" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
                   <ui:InterruptibleDoWhile.Body>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,450" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,470" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="338,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  previous year'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -570,7 +873,10 @@
                           </ui:CursorPosition>
                         </ui:Click.CursorPosition>
                         <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="f6c4d18ac01a6ddf2e47ac9ba144e0f6" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl omit:name='previous year previous month April 2023 next month next year' role='cell' /&gt;&lt;ctrl name='next month' role='link' /&gt;">
+                          <ui:Target Element="{x:Null}" Id="1851e862-3e0f-445f-a9ec-620e56f8a1dc" InformativeScreenshot="b43dfd7c164d9547a67ad10ac9ddd1ed" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;">
+                            <ui:Target.ClippingRegion>
+                              <ui:Region Rectangle="210, 5, 43, 24" />
+                            </ui:Target.ClippingRegion>
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
@@ -580,8 +886,8 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Moving right 1 month" />
-                      <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="WriteLine_15" Text="Moving right 1 month" />
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[Sub_Month]</OutArgument>
                         </Assign.To>
@@ -595,7 +901,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="400,104" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -607,7 +913,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Datepicker now on correct Year and Month">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Datepicker now on correct Year and Month">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -615,19 +921,412 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  20'" sap:VirtualizedContainerService.HintSize="431,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
-      <ui:Click.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="c2dc303f-9779-4d15-8225-8537a1869b28" DisplayName="CV Screen Scope 'pane'" sap:VirtualizedContainerService.HintSize="684,561" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'Su' (33,49,12,9) Offset: (-15,23,274,214)&quot;]" DesignTimeCacheId="c2dc303f-9779-4d15-8225-8537a1869b28" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Text" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_2" InformativeScreenshot="6309311d87038faec818783098acc5fc" NumberOfScrolls="2" RefreshBefore="True" Result="[str_CalendarText]" ScrollDirection="None" Version="V6">
+              <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                <uc:CvDescriptor Id="4e3e28b3-d4b0-4a61-840f-f38e51ee321a" TargetOffset="-15, 23, 274, 214">
+                  <uc:CvDescriptor.Target>
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="33, 49, 12, 9" ElementType="Text" Text="Su" />
+                  </uc:CvDescriptor.Target>
+                </uc:CvDescriptor>
+              </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+            </p:CvGetTextWithDescriptor>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - Icon (Main)" Id="c2dc303f-9779-4d15-8225-8537a1869b28" InformativeScreenshot="7f24c2e9b92da7870da41bfce81632ef" LogicalPosition="208, 266" OcrText="1&lt; &lt; October 2022 &gt; &gt;1&#xA;Su Mo Tu We Th Fr Sa&#xA;25 26 27 28 29 30 1&#xA;2 3 4 5 6 7 8&#xA;9 10 11 12 13 14 15&#xA;16 17 18 19 20 21 22&#xA;23 24 25 26 27 28 co&#xA;30 31 1 2 3 4 5" Position="208, 266" ScreenshotGuid="fc13c05d-19a1-4354-a6cb-1b933ac7c2d0" ServerVersion="1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="256">
+                    <uc:CvElementInfo Category="Icon" Region="248, 217, 36, 37" />
+                    <uc:CvElementInfo Category="Icon" Region="28, 5, 23, 22" />
+                    <uc:CvElementInfo Category="Icon" Region="256, 6, 20, 20" />
+                    <uc:CvElementInfo Category="Cell" Region="101, 37, 37, 33" />
+                    <uc:CvElementInfo Category="Cell" Region="61, 32, 36, 35" />
+                    <uc:CvElementInfo Category="Cell" Region="100, 108, 31, 40" />
+                    <uc:CvElementInfo Category="Cell" Region="242, 109, 61, 38" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="28, 6, 22, 21" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="62, 7, 17, 18" />
+                    <uc:CvElementInfo Category="CloseButton" Confidence="Runtime" Region="255, 6, 21, 21" />
+                    <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="227, 6, 17, 19" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="28, 5, 23, 23" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="255, 5, 21, 21" />
+                    <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="254, 5, 23, 22" />
+                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="24, 0, 258, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="140, 110, 36, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="100, 148, 37, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="139, 143, 33, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="214, 108, 29, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="101, 69, 33, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="64, 149, 38, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="179, 108, 31, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="19, 32, 38, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="129, 35, 44, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="79, 186, 84, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="215, 149, 37, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="141, 70, 32, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="100, 185, 36, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="178, 148, 36, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="90, 222, 35, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="160, 110, 35, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="203, 184, 46, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="101, 216, 31, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="129, 184, 43, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="167, 184, 47, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="9, 187, 74, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="147, 109, 81, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="243, 144, 60, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="61, 260, 32, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="140, 218, 32, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="56, 186, 72, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="215, 179, 29, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="62, 215, 31, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="103, 259, 29, 44" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="68, 185, 29, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="61, 109, 35, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="18, 147, 45, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="53, 143, 44, 50" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="163, 223, 35, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="246, 182, 55, 30" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="142, 258, 36, 31" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="50, 219, 51, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="204, 148, 34, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="167, 71, 48, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="176, 223, 29, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="134, 69, 29, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="181, 257, 36, 26" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="98, 161, 32, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="97, 170, 30, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="2, 222, 100, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="138, 121, 30, 26" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="136, 260, 34, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="172, 167, 41, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="194, 186, 92, 29" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="4, 262, 58, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="58, 232, 32, 29" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="104, 242, 22, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="99, 232, 30, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="121, 223, 36, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="179, 185, 22, 32" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="98, 203, 31, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="141, 204, 32, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="131, 165, 45, 19" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="53, 112, 43, 70" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="217, 129, 20, 19" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="57, 164, 42, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="21, 181, 41, 32" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="65, 69, 35, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="171, 34, 44, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="82, 258, 23, 44" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="109, 257, 34, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="118, 235, 55, 45" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="215, 139, 30, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="44, 234, 59, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="178, 242, 19, 18" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="180, 68, 34, 30" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="104, 196, 62, 25" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="235, 206, 69, 95" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="22, 109, 69, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="206, 34, 44, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="164, 100, 50, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="209, 167, 41, 17" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="52, 184, 37, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="80, 220, 24, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="241, 186, 38, 25" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="206, 220, 32, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="217, 104, 37, 30" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="53, 147, 82, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="42, 106, 24, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="175, 204, 31, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="191, 107, 26, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="161, 237, 56, 44" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="95, 220, 35, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 221, 27, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="79, 145, 91, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="126, 147, 91, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="25, 109, 31, 38" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="128, 146, 35, 34" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="235, 213, 62, 44" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="5, 259, 56, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="196, 109, 59, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="169, 129, 37, 16" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="41, 260, 25, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="109, 146, 41, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="247, 33, 34, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="64, 108, 40, 22" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="134, 231, 30, 29" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="157, 67, 20, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="102, 261, 36, 17" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="247, 259, 56, 23" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="110, 183, 93, 121" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="99, 145, 29, 26" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="176, 261, 32, 36" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="82, 107, 22, 41" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="113, 70, 27, 40" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="62, 243, 33, 20" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="113, 220, 49, 24" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="195, 221, 21, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="183, 111, 47, 30" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="212, 216, 49, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="81, 146, 23, 42" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="209, 167, 30, 37" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="167, 184, 34, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="75, 184, 32, 35" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="93, 259, 126, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="174, 144, 37, 26" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="166, 183, 21, 39" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="132, 170, 40, 31" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="280, 150, 24, 33" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="136, 242, 33, 21" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="50, 213, 37, 31" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="46, 106, 39, 32" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="256, 142, 46, 28" />
+                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="61, 145, 40, 23" />
+                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="22, 2, 261, 32" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="227, 6, 18, 21" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="61, 6, 18, 20" />
+                    <uc:CvElementInfo Category="ArrowButton" Region="255, 5, 21, 21" />
+                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="28, 5, 23, 23" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="55">
+                    <uc:OcrTextInfo Region="34, 10, 12, 12" Text="1&lt;" />
+                    <uc:OcrTextInfo Region="68, 10, 6, 12" Text="&lt;" />
+                    <uc:OcrTextInfo Region="106, 11, 55, 12" Text="October" />
+                    <uc:OcrTextInfo Region="166, 11, 35, 12" Text="2022" />
+                    <uc:OcrTextInfo Region="232, 10, 7, 12" Text="&gt;" />
+                    <uc:OcrTextInfo Region="260, 10, 12, 12" Text="&gt;1" />
+                    <uc:OcrTextInfo Region="33, 49, 12, 9" Text="Su" />
+                    <uc:OcrTextInfo Region="69, 49, 16, 9" Text="Mo" />
+                    <uc:OcrTextInfo Region="109, 49, 12, 9" Text="Tu" />
+                    <uc:OcrTextInfo Region="145, 49, 16, 9" Text="We" />
+                    <uc:OcrTextInfo Region="184, 49, 13, 9" Text="Th" />
+                    <uc:OcrTextInfo Region="225, 49, 9, 9" Text="Fr" />
+                    <uc:OcrTextInfo Region="261, 49, 12, 9" Text="Sa" />
+                    <uc:OcrTextInfo Region="33, 78, 12, 9" Text="25" />
+                    <uc:OcrTextInfo Region="71, 78, 12, 9" Text="26" />
+                    <uc:OcrTextInfo Region="109, 78, 12, 9" Text="27" />
+                    <uc:OcrTextInfo Region="147, 78, 12, 9" Text="28" />
+                    <uc:OcrTextInfo Region="185, 78, 12, 9" Text="29" />
+                    <uc:OcrTextInfo Region="223, 78, 12, 9" Text="30" />
+                    <uc:OcrTextInfo Region="264, 78, 4, 9" Text="1" />
+                    <uc:OcrTextInfo Region="36, 116, 6, 9" Text="2" />
+                    <uc:OcrTextInfo Region="74, 116, 6, 9" Text="3" />
+                    <uc:OcrTextInfo Region="112, 116, 6, 9" Text="4" />
+                    <uc:OcrTextInfo Region="151, 116, 5, 9" Text="5" />
+                    <uc:OcrTextInfo Region="188, 116, 6, 9" Text="6" />
+                    <uc:OcrTextInfo Region="226, 116, 6, 9" Text="7" />
+                    <uc:OcrTextInfo Region="264, 116, 6, 9" Text="8" />
+                    <uc:OcrTextInfo Region="36, 154, 6, 9" Text="9" />
+                    <uc:OcrTextInfo Region="71, 154, 13, 9" Text="10" />
+                    <uc:OcrTextInfo Region="109, 154, 11, 9" Text="11" />
+                    <uc:OcrTextInfo Region="147, 154, 13, 9" Text="12" />
+                    <uc:OcrTextInfo Region="185, 154, 13, 9" Text="13" />
+                    <uc:OcrTextInfo Region="222, 154, 14, 9" Text="14" />
+                    <uc:OcrTextInfo Region="261, 154, 13, 9" Text="15" />
+                    <uc:OcrTextInfo Region="33, 192, 13, 9" Text="16" />
+                    <uc:OcrTextInfo Region="71, 192, 13, 9" Text="17" />
+                    <uc:OcrTextInfo Region="109, 192, 13, 9" Text="18" />
+                    <uc:OcrTextInfo Region="147, 192, 13, 9" Text="19" />
+                    <uc:OcrTextInfo Region="185, 192, 13, 9" Text="20" />
+                    <uc:OcrTextInfo Region="222, 192, 12, 9" Text="21" />
+                    <uc:OcrTextInfo Region="261, 192, 13, 9" Text="22" />
+                    <uc:OcrTextInfo Region="32, 230, 14, 9" Text="23" />
+                    <uc:OcrTextInfo Region="70, 230, 14, 9" Text="24" />
+                    <uc:OcrTextInfo Region="108, 230, 14, 9" Text="25" />
+                    <uc:OcrTextInfo Region="147, 230, 13, 9" Text="26" />
+                    <uc:OcrTextInfo Region="185, 230, 13, 9" Text="27" />
+                    <uc:OcrTextInfo Region="223, 230, 13, 9" Text="28" />
+                    <uc:OcrTextInfo Region="251, 219, 32, 32" Text="co" />
+                    <uc:OcrTextInfo Region="32, 268, 14, 9" Text="30" />
+                    <uc:OcrTextInfo Region="71, 268, 11, 9" Text="31" />
+                    <uc:OcrTextInfo Region="113, 268, 4, 9" Text="1" />
+                    <uc:OcrTextInfo Region="150, 268, 6, 9" Text="2" />
+                    <uc:OcrTextInfo Region="188, 268, 6, 9" Text="3" />
+                    <uc:OcrTextInfo Region="226, 268, 6, 9" Text="4" />
+                    <uc:OcrTextInfo Region="265, 268, 5, 9" Text="5" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <uoa:OmniPageOCR Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" BundleType="Basic" ComputeSkewAngle="False" DisplayName="OmniPage OCR" ExtractHandprintedText="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="OmniPageOCR_2" Image="[Image]" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64d15ff5-4c24-4f3b-bb7c-2cf3a191c2a3" InformativeScreenshot="e0d67892844b34c1ea086c62787aa5d9" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:Click.CursorPosition>
-      <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3cecdf4-ca87-47d9-a367-9b05ae23c522" InformativeScreenshot="a40f7b11958575cc18da52317e0208f0" Selector="[&quot;&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='&quot;+IN_DAY.ToString+&quot;' role='cell' /&gt;&lt;ctrl name='&quot;+IN_DAY.ToString+&quot;' role='link' /&gt;&quot;]">
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+    </p:CVScope>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="684,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Calendar Text:  &quot; +str_CalendarText]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="684,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[int_index]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:String[]">[arr_CalendarTextArray]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:String[]">[str_CalendarText.Split(" "c)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="684,1133" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_CalendarTextArray]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="528,947" sap2010:WorkflowViewState.IdRef="Sequence_26">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,203" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[item.ToString + &quot; - &quot; + int_index.ToString]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <If Condition="[item.ToString = IN_Day.ToString OR item.ToString = &quot;CO&quot; OR item.ToString = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="486,645" sap2010:WorkflowViewState.IdRef="If_7">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="452,463" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[IN_Day &gt; 7 AND int_index &lt; 7]" sap:VirtualizedContainerService.HintSize="410,375" sap2010:WorkflowViewState.IdRef="If_8">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,113" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:Break sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[int_index]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[int_index + 1]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[int_index]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[int_index + 5]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[IN_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,410" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5" MaxIterations="[int_index]">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="388,133" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5437244b-37fa-4dd3-8f69-e16423516913">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:SendHotkey.Target>
+          </ui:SendHotkey>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+    </ui:InterruptibleDoWhile>
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510,133" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="22d531a3-6e8f-4129-bd58-788b54388133">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -635,18 +1334,58 @@
             <InArgument x:TypeArguments="ui:WaitForReady" />
           </ui:Target.WaitForReady>
         </ui:Target>
-      </ui:Click.Target>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:Click>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="431,52" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Date selected">
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[arr_CalendarTextArray(0).ToString]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_28">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'link  20'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d3cecdf4-ca87-47d9-a367-9b05ae23c522" InformativeScreenshot="a40f7b11958575cc18da52317e0208f0" Selector="[&quot;&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='Calendar' role='cell' /&gt;&lt;ctrl name='Calendar' role='table' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='&quot;+IN_DAY.ToString+&quot;' role='cell' /&gt;&lt;ctrl name='&quot;+IN_DAY.ToString+&quot;' role='link' /&gt;&quot;]">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:Click>
+        </Sequence>
+      </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_16" Text="Date selected">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
