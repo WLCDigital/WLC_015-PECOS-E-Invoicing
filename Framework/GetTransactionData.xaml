@@ -176,12 +176,19 @@
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderInputDocs" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderUnableToProcess" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderUpload" />
-                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_ApplicationID">[Office365_ApplicationID]</OutArgument>
-                    <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Office365_ApplicationSecretValue">[Office365_ApplicationSecretValue]</OutArgument>
-                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_TenantID">[Office365_TennantID]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_ApplicationID">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Office365_ApplicationID" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Office365_ApplicationSecretValue">
+                      <VisualBasicReference x:TypeArguments="ss:SecureString" ExpressionText="Office365_ApplicationSecretValue" />
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_TenantID">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Office365_TennantID" />
+                    </OutArgument>
                     <OutArgument x:TypeArguments="x:String" x:Key="out_Email_Method" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderActionCenter" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderPerformer" />
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_Live_OR_Test" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Microsoft365\GetEmailByCategory.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="510,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Microsoft365\GetEmailByCategory.xaml">
@@ -195,7 +202,7 @@
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[EmailMessages.ToString]" />
                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,285" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,386" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
