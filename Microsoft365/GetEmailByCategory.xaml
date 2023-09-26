@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,2195</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154,2375</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Test_GetEmailByAttachmentName_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -120,7 +120,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Only want to get emails once to save some time" DisplayName="GetEmailByAttachmentName" sap:VirtualizedContainerService.HintSize="572,2130" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Only want to get emails once to save some time" DisplayName="GetEmailByAttachmentName" sap:VirtualizedContainerService.HintSize="572,2310" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EmailAccount" />
       <Variable x:TypeArguments="x:String" Name="emailFilters" />
@@ -143,7 +143,7 @@
         <OutArgument x:TypeArguments="x:String">[EmailAccount]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <If Condition="[EmailAccount = &quot;.&quot;]" DisplayName="If - Account is Blank" sap:VirtualizedContainerService.HintSize="510,484" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[EmailAccount = &quot;.&quot;]" DisplayName="If - Account is Blank" sap:VirtualizedContainerService.HintSize="510,664" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="476,302" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -165,13 +165,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="400,203" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,180" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Email Asset" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Account Asset: &quot; + EmailAccount]" />
+          <ui:LogMessage DisplayName="Log Message - Email Asset" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email Account Asset: &quot; + EmailAccount]" />
         </Sequence>
       </If.Else>
     </If>
@@ -186,12 +186,12 @@
               <InArgument x:TypeArguments="x:String">categories/any(c:c eq 'Blue Category')</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="AssignOperation_2">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[EmailFolder]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">Inbox\PECOS E-Invoicing\To Do</InArgument>
+              <InArgument x:TypeArguments="x:String">Inbox\To Do</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
         </scg:List>
@@ -228,7 +228,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="True" Filter=".*(.pdf|.PDF)" FolderPath="C:\VKY\PECOS Invoices\To Be Processed" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[item]" OverwriteExisting="False" />
-                    <umam:MoveMail Account="svc-ccuibot1@westlothian.gov.uk" DestinationFolderName="Inbox\PECOS E-Invoicing\Processed" DisplayName="Move Mail" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[item]" />
+                    <umam:MoveMail Account="svc-ccuibot1@westlothian.gov.uk" DestinationFolderName="Inbox\Processed" DisplayName="Move Mail" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[item]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
