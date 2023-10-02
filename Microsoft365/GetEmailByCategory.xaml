@@ -228,7 +228,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="True" Filter=".*(.pdf|.PDF)" FolderPath="C:\VKY\PECOS Invoices\To Be Processed" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[item]" OverwriteExisting="False" />
-                    <umam:MoveMail Account="svc-ccuibot1@westlothian.gov.uk" DestinationFolderName="Inbox\Processed" DisplayName="Move Mail" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[item]" />
+                    <umam:MoveMail Account="[EmailAccount]" DestinationFolderName="Inbox\Processed" DisplayName="Move Mail" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="MoveMail_1" Message="[item]" />
                   </Sequence>
                 </ActivityAction>
               </ui:ForEach.Body>
