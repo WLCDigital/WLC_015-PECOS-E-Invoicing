@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1154,16023</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,16023</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="148">
@@ -629,7 +629,7 @@
                                   <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  UNKNOWN&#xA;&#xA;The attached invoice was not added to PECOS - Invoice details could not be extracted by the robot.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="652,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unrecognised&quot;]" To="svc-ccuibot1@westlothian.gov.uk;">
+                              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  UNKNOWN&#xA;&#xA;The attached invoice was not added to PECOS - Invoice details could not be extracted by the robot.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="652,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unrecognised&quot;]" To="pecosinvoices@westlothian.gov.uk;">
                                 <ui:SendOutlookMail.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                     <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Unrecognised\" + fl.Name]</InArgument>
@@ -1016,24 +1016,12 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PECOS Add Invoice.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PECOS\PECOS Add Invoice.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="sd2:DataSet" x:Key="in_Dataset">
-                                    <VisualBasicValue x:TypeArguments="sd2:DataSet" ExpressionText="outputDataset" />
-                                  </InArgument>
-                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Found">
-                                    <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="FoundPO" />
-                                  </OutArgument>
-                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TotalsMatch">
-                                    <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="totalsMatch" />
-                                  </OutArgument>
-                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_NotAdded">
-                                    <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="notAdded" />
-                                  </OutArgument>
-                                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_email_date">
-                                    <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="Now()" />
-                                  </InArgument>
-                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Duplicate">
-                                    <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="DuplicatePO" />
-                                  </OutArgument>
+                                  <InArgument x:TypeArguments="sd2:DataSet" x:Key="in_Dataset">[outputDataset]</InArgument>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Found">[FoundPO]</OutArgument>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_TotalsMatch">[totalsMatch]</OutArgument>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_NotAdded">[notAdded]</OutArgument>
+                                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_email_date">[Now()]</InArgument>
+                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Duplicate">[DuplicatePO]</OutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -1049,12 +1037,10 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Duplicate - Invoice No is already in use&quot;]" />
                               <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\VKY\PECOS Invoices\Z_Duplicates" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="MoveFile_7" Overwrite="True" Path="[&quot;C:\VKY\PECOS Invoices\In Progress\&quot; + fl.Name]" />
-                              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xD;&#xA;&#xD;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xD;&#xA;&quot;&#xD;&#xA;&#xD;&#xA;The attached invoice no was found to be already in use, so it was not uploaded.&#xD;&#xA;&#xD;&#xA;Kind Regards,&#xD;&#xA;&#xD;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_6" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Duplicate&quot;]" To="svc-ccuibot1@westlothian.gov.uk">
+                              <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice no was found to be already in use, so it was not uploaded.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_6" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Duplicate&quot;]" To="pecosinvoices@westlothian.gov.uk">
                                 <ui:SendOutlookMail.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                    <InArgument x:TypeArguments="x:String">
-                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\VKY\PECOS Invoices\Z_Duplicates\&quot; + fl.Name" />
-                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Z_Duplicates\" + fl.Name]</InArgument>
                                   </scg:List>
                                 </ui:SendOutlookMail.Files>
                               </ui:SendOutlookMail>
@@ -1098,7 +1084,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\VKY\PECOS Invoices\Processed" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="MoveFile_3" Overwrite="True" Path="[&quot;C:\VKY\PECOS Invoices\In Progress\&quot; + fl.Name]" />
-                                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice has sucessfully been added to PECOS.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Successful&quot;]" To="svc-ccuibot1@westlothian.gov.uk">
+                                          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice has sucessfully been added to PECOS.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Successful&quot;]" To="pecosinvoices@westlothian.gov.uk">
                                             <ui:SendOutlookMail.Files>
                                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                 <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Processed\" + fl.Name]</InArgument>
@@ -1108,13 +1094,13 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="492,676" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                        <Sequence sap:VirtualizedContainerService.HintSize="492,813" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="450,588" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="450,725" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1122,7 +1108,7 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                             <ui:LogMessage DisplayName="Log Message - Doc cant be processed" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Document: &quot; + fl.Name + &quot; - Invoice Totals on PECOS did not match the Invoice.  Skipping to the next Invoice.&quot;]" />
                                             <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\VKY\PECOS Invoices\Unable To Be Processed" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="388,159" sap2010:WorkflowViewState.IdRef="MoveFile_6" Overwrite="True" Path="[&quot;C:\VKY\PECOS Invoices\In Progress\&quot; + fl.Name]" />
-                                            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice was not added to PECOS - Invoice Totals on PECOS did not match the Invoice.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unsuccessful&quot;]" To="svc-ccuibot1@westlothian.gov.uk">
+                                            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice was not added to PECOS - Invoice Totals on PECOS did not match the Invoice.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,283" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unsuccessful&quot;]" To="pecosinvoices@westlothian.gov.uk">
                                               <ui:SendOutlookMail.Files>
                                                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                   <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Unable To Be Processed\" + fl.Name]</InArgument>
@@ -1136,7 +1122,7 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,565" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,702" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1144,7 +1130,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:LogMessage DisplayName="Log Message - Doc cant be processed" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Document: &quot; + fl.Name + &quot; - Couldn't be processed on PECOS.  Skipping to the next Invoice.&quot;]" />
                                     <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\VKY\PECOS Invoices\Unable To Be Processed" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="334,159" sap2010:WorkflowViewState.IdRef="MoveFile_5" Overwrite="True" Path="[&quot;C:\VKY\PECOS Invoices\In Progress\&quot; + fl.Name]" />
-                                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice was not added to PECOS - PO Number could not be found.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_4" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unsuccessful&quot;]" To="svc-ccuibot1@westlothian.gov.uk">
+                                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  &quot; + outputDataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &#xA;&quot;&#xA;&#xA;The attached invoice was not added to PECOS - PO Number could not be found.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,283" sap2010:WorkflowViewState.IdRef="SendOutlookMail_4" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unsuccessful&quot;]" To="pecosinvoices@westlothian.gov.uk">
                                       <ui:SendOutlookMail.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                           <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Unable To Be Processed\" + fl.Name]</InArgument>
@@ -1303,7 +1289,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="541,1615" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="541,1548" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1312,14 +1298,14 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message - Doc cant be processed" sap:VirtualizedContainerService.HintSize="499,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Document: &quot; + fl.Name + &quot; - Couldn't be classified. Skipping the extraction step.&quot;]" />
                   <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="C:\VKY\PECOS Invoices\Unrecognised" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="499,159" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[&quot;C:\VKY\PECOS Invoices\To Be Processed\&quot; + fl.Name]" />
-                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  UNKNOWN&#xA;&#xA;The attached invoice was not added to PECOS - Invoice details could not be extracted by the robot.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="499,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_5" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unrecognised&quot;]" To="svc-ccuibot1@westlothian.gov.uk;">
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;PO Number:  UNKNOWN&#xA;&#xA;The attached invoice was not added to PECOS - Invoice details could not be extracted by the robot.&#xA;&#xA;Kind Regards,&#xA;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="499,268" sap2010:WorkflowViewState.IdRef="SendOutlookMail_5" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;PECOS E-Invoicing - &quot; + fl.Name + &quot; - Unrecognised&quot;]" To="pecosinvoices@westlothian.gov.uk;">
                     <ui:SendOutlookMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                         <InArgument x:TypeArguments="x:String">["C:\VKY\PECOS Invoices\Unrecognised\" + fl.Name]</InArgument>
                       </scg:List>
                     </ui:SendOutlookMail.Files>
                   </ui:SendOutlookMail>
-                  <If Condition="[notAdded = False]" sap:VirtualizedContainerService.HintSize="499,560" sap2010:WorkflowViewState.IdRef="If_13">
+                  <If Condition="[notAdded = False]" sap:VirtualizedContainerService.HintSize="499,371" sap2010:WorkflowViewState.IdRef="If_13">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="465,189" sap2010:WorkflowViewState.IdRef="Sequence_45">
                         <sap:WorkflowViewStateService.ViewState>
