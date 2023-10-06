@@ -26,7 +26,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.3.0",
-  "projectVersion": "1.0.1-beta.5",
+  "projectVersion": "1.0.1-beta.6",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -118,6 +118,12 @@
     {
       "filePath": "PECOS\\PECOS_Login.xaml",
       "uniqueId": "f0a06603-6856-4d8c-b7a1-62dcb127ac83",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Tests\\TestEmail.xaml",
+      "uniqueId": "19e077b6-e7a7-430b-8f25-33c758f5673a",
       "input": [],
       "output": []
     }

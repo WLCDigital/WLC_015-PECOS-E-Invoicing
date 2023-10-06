@@ -212,7 +212,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xA;&#xA;This process had just run - please find the Run Summary Attached.&#xA;&#xA;Kind Regards,&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,223" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - Run Summary&quot;]" To="[distList]">
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi,&#xD;&#xA;&#xD;&#xA;This process has just run - please find the Run Summary Attached.&#xD;&#xA;&#xD;&#xA;Kind Regards,&#xD;&#xA;&quot; + Environment.MachineName]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,223" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - Run Summary&quot;]" To="[distList]">
                     <ui:SendOutlookMail.Files>
                       <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                         <InArgument x:TypeArguments="x:String">C:\VKY\PECOS Invoices\RunSummary.csv</InArgument>
