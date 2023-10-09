@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,13101</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,13037</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Add_Invoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -129,7 +129,7 @@
       <AssemblyReference>System.CodeDom</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,13036" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,12932" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="FoundOnPECOS" />
       <Variable x:TypeArguments="s:DateTime" Name="date_email" />
@@ -140,7 +140,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="WLC-015-Receipt-Email" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Development" sap:VirtualizedContainerService.HintSize="738,143" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="WLC-015-Receipt-Email" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Development" sap:VirtualizedContainerService.HintSize="434,39" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.Value>
         <OutArgument x:TypeArguments="x:Boolean">[bool_sendReceipt]</OutArgument>
       </ui:GetRobotAsset.Value>
@@ -164,7 +164,7 @@
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_28" />
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="738,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Searching for &quot; + in_Dataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &quot; to PECOS&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="738,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Searching for &quot; + in_Dataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString + &quot; on PECOS&quot;]" />
     <Assign sap:VirtualizedContainerService.HintSize="738,82" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[date_email]</OutArgument>

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1154,823" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1882" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>GlobalConstantsNamespace</x:String>
@@ -27,10 +27,26 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
@@ -55,17 +71,236 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="450,758" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="1062,1817" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="1000,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <uix:NCheckState DelayBefore="5" DisplayName="Check App State 'Restore pages?'" sap:VirtualizedContainerService.HintSize="1000,1030" sap2010:WorkflowViewState.IdRef="NCheckState_1">
+      <uix:NCheckState.IfExists>
+        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,813" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message - Chrome Restore Widget Found" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Chrome Restore Page Widget Found&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="fead641f-ba53-4a94-94e6-17b7faebbbb0" DisplayName="CV Screen Scope 'chrome.exe Restore'" sap:VirtualizedContainerService.HintSize="434,566" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+            <p:CVScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (237,160,75,35)&quot; +&#xD;&#xA;&quot;Anchor: Button (156,160,75,35)&quot;]" DesignTimeCacheId="fead641f-ba53-4a94-94e6-17b7faebbbb0" DesignTimeScaleFactor="1" DisplayName="CV Click - Button" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="9cfa2cc70411edf698d803f9099b88b2" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="12a92ff7-d202-4660-995f-f4c7764f0194">
+                        <uc:CvDescriptor.Anchors>
+                          <x:Array Type="uc:CvElementDescriptor">
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="156, 160, 75, 35" ElementType="Button" />
+                          </x:Array>
+                        </uc:CvDescriptor.Anchors>
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="237, 160, 75, 35" ElementType="Button" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bb827834-6537-438d-8550-bf593aac6f07">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </ActivityAction>
+            </p:CVScope.Body>
+            <p:CVScope.DesignTimeCache>
+              <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+            </p:CVScope.DesignTimeCache>
+            <p:CVScope.DesignTimeCacheContainer>
+              <uc:CvCacheContainer>
+                <uc:CvCacheContainer.Caches>
+                  <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                    <uc:CVCache DataSent="False" DisplayName="Screen CV Click - CloseButton (Main)" Id="fead641f-ba53-4a94-94e6-17b7faebbbb0" InformativeScreenshot="6bd7bafe175ff3d66c01fb338e571881" LogicalPosition="1124, 441" OcrText="x&#xD;&#xA;Restore pages?&#xD;&#xA;Chrome didn't shut down correctly.&#xD;&#xA;DO Help make Google Chrome better by sending&#xD;&#xA;crash reports and usage statistics to Google" Position="1124, 441" ScreenshotGuid="f665ee08-ffdb-4cde-9f8e-813b193758ea" ServerVersion="1">
+                      <uc:CVCache.CvAnchorRelations>
+                        <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                          <uc:AnchorRelationInfo IsTargetText="False" Target="2">
+                            <uc:AnchorRelationInfo.Anchors>
+                              <x:Array Type="x:Int32">
+                                <x:Int32>8</x:Int32>
+                                <x:Int32>9</x:Int32>
+                                <x:Int32>10</x:Int32>
+                                <x:Int32>11</x:Int32>
+                                <x:Int32>12</x:Int32>
+                                <x:Int32>13</x:Int32>
+                                <x:Int32>14</x:Int32>
+                              </x:Array>
+                            </uc:AnchorRelationInfo.Anchors>
+                          </uc:AnchorRelationInfo>
+                        </scg:List>
+                      </uc:CVCache.CvAnchorRelations>
+                      <uc:CVCache.CvUiElements>
+                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="8">
+                          <uc:CvElementInfo Category="Button" Region="237, 160, 75, 35" />
+                          <uc:CvElementInfo Category="Button" Region="156, 160, 75, 35" />
+                          <uc:CvElementInfo Category="CheckBox" Region="24, 95, 14, 13" />
+                          <uc:CvElementInfo Category="CloseButton" Region="303, 11, 17, 16" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="325, 14, 9, 13" />
+                        </scg:List>
+                      </uc:CVCache.CvUiElements>
+                      <uc:CVCache.OcrTexts>
+                        <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="23">
+                          <uc:OcrTextInfo Region="306, 15, 10, 10" Text="x" />
+                          <uc:OcrTextInfo Region="24, 27, 49, 11" Text="Restore" />
+                          <uc:OcrTextInfo Region="78, 27, 48, 14" Text="pages?" />
+                          <uc:OcrTextInfo Region="24, 56, 48, 10" Text="Chrome" />
+                          <uc:OcrTextInfo Region="73, 56, 36, 10" Text="didn't" />
+                          <uc:OcrTextInfo Region="109, 56, 24, 10" Text="shut" />
+                          <uc:OcrTextInfo Region="138, 56, 32, 10" Text="down" />
+                          <uc:OcrTextInfo Region="173, 56, 50, 13" Text="correctly." />
+                          <uc:OcrTextInfo Region="25, 96, 12, 12" Text="DO" />
+                          <uc:OcrTextInfo Region="52, 97, 24, 12" Text="Help" />
+                          <uc:OcrTextInfo Region="80, 97, 28, 9" Text="make" />
+                          <uc:OcrTextInfo Region="111, 97, 42, 12" Text="Google" />
+                          <uc:OcrTextInfo Region="153, 97, 42, 9" Text="Chrome" />
+                          <uc:OcrTextInfo Region="199, 97, 36, 9" Text="better" />
+                          <uc:OcrTextInfo Region="234, 97, 14, 12" Text="by" />
+                          <uc:OcrTextInfo Region="250, 97, 42, 12" Text="sending" />
+                          <uc:OcrTextInfo Region="51, 117, 30, 9" Text="crash" />
+                          <uc:OcrTextInfo Region="83, 118, 42, 11" Text="reports" />
+                          <uc:OcrTextInfo Region="124, 117, 21, 9" Text="and" />
+                          <uc:OcrTextInfo Region="148, 120, 30, 9" Text="usage" />
+                          <uc:OcrTextInfo Region="182, 118, 50, 8" Text="statistics" />
+                          <uc:OcrTextInfo Region="230, 118, 12, 8" Text="to" />
+                          <uc:OcrTextInfo Region="245, 117, 42, 12" Text="Google" />
+                        </scg:List>
+                      </uc:CVCache.OcrTexts>
+                    </uc:CVCache>
+                  </scg:List>
+                </uc:CvCacheContainer.Caches>
+              </uc:CvCacheContainer>
+            </p:CVScope.DesignTimeCacheContainer>
+            <p:CVScope.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" />
+              </ActivityFunc>
+            </p:CVScope.OCREngine>
+            <p:CVScope.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3399cd3-8bc2-49fe-be31-fa4febecb178" InformativeScreenshot="ced51eceb5139a8f57ec8c167e85ebed" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Restore pages?' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </p:CVScope.Target>
+            <p:CVScope.UseLocalServer>
+              <InArgument x:TypeArguments="x:Boolean" />
+            </p:CVScope.UseLocalServer>
+          </p:CVScope>
+        </Sequence>
+      </uix:NCheckState.IfExists>
+      <uix:NCheckState.IfNotExists>
+        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,207" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message - Chrome Restore Widget Not Found" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Chrome Restore Page Widget Not Found&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+        </Sequence>
+      </uix:NCheckState.IfNotExists>
+      <uix:NCheckState.Target>
+        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 334, 218" DesignTimeScaleFactor="1" FriendlyName="'Restore pages?'" FullSelectorArgument="&lt;ctrl name='Restore pages?' role='alert' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Restore pages?' role='alert' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='Restore pages?&amp;#xD;&amp;#xA;Close&amp;#xD;&amp;#xA;Chrome didn&amp;apos;t shut down correctly.&amp;#xD;&amp;#xA;usage statistics&amp;#xD;&amp;#xA;Restore&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="4924fb5b-7f60-4c87-8351-0386ab9cc673" ImageBase64="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" InformativeScreenshot="c68a674debcfc2894a8f8fe37f050070.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Restore pages?' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+      </uix:NCheckState.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NCheckState>
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="1000,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -87,7 +322,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="388,87" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="1000,87" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -109,7 +344,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1000,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -127,7 +362,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CloseApplication DisplayName="Close Application 'push button  Close'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+    <ui:CloseApplication DisplayName="Close Application 'push button  Close'" sap:VirtualizedContainerService.HintSize="1000,107" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
       <ui:CloseApplication.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40492449-29a1-4690-a367-d1614153757d" InformativeScreenshot="22cbf3d0dc141f768e29734729c1c2c5" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='PECOS Internet Procurement Manager, version 18.0 - Google Chrome' /&gt;&lt;ctrl name='PECOS Internet Procurement Manager, version 18.0 - Google Chrome' role='pane' /&gt;&lt;ctrl name='Close' role='push button' /&gt;">
           <ui:Target.TimeoutMS>
