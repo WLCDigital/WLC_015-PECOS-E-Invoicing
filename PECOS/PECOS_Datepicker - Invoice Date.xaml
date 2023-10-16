@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1794,12363</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>736,11781</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="746,12258" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="746,11716" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DatePickerMonthCorrect" />
       <Variable x:TypeArguments="x:String" Name="DatepickerMonthText" />
@@ -201,7 +201,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:UiElementExists>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684,594" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,515" sap2010:WorkflowViewState.IdRef="Sequence_19">
           <sap:WorkflowViewStateService.ViewState>
@@ -260,8 +260,8 @@
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
@@ -272,7 +272,7 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_29">
-            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (103,11,100,15)&quot; +&#xD;&#xA;&quot;Anchor: Text 'We' (145,49,16,9)&quot;]" DesignTimeCacheId="7b1e31f4-839a-4751-8acc-fb32c85f083e" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="165d28b8570bd7091a4b23c25bb12dec" NumberOfScrolls="2" RefreshBefore="True" Result="[DatepickerMonthText]" ScrollDirection="None" Version="V6">
+            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (103,11,100,15)&quot; +&#xA;&quot;Anchor: Text 'We' (145,49,16,9)&quot;]" DesignTimeCacheId="7b1e31f4-839a-4751-8acc-fb32c85f083e" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="165d28b8570bd7091a4b23c25bb12dec" NumberOfScrolls="2" RefreshBefore="True" Result="[DatepickerMonthText]" ScrollDirection="None" Version="V6">
               <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                 <uc:CvDescriptor Id="059f5b56-9b3f-492e-857b-9179d58ffb54">
                   <uc:CvDescriptor.Anchors>
@@ -289,11 +289,14 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
             <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - '' (Main)" Id="7b1e31f4-839a-4751-8acc-fb32c85f083e" InformativeScreenshot="ddf137c3bd6320714ebbc2411a32f7f3" LogicalPosition="208, 266" OcrText="1&lt; &lt; February 2023 &gt; &gt;1&#xD;&#xA;Su Mo Tu We Th Fr Sa&#xD;&#xA;29 30 31 1 2 3 4&#xD;&#xA;5 6 7 8 9 10 11&#xD;&#xA;12 13 14 ID 16 17 18&#xD;&#xA;19 20 21 22 23 24 25&#xD;&#xA;26 27 28 1 2 3 4" Position="208, 266" ScreenshotGuid="4befc987-cef2-4517-8e5c-8f89853c8522" ServerVersion="1">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - '' (Main)" Id="7b1e31f4-839a-4751-8acc-fb32c85f083e" InformativeScreenshot="ddf137c3bd6320714ebbc2411a32f7f3" LogicalPosition="208, 266" OcrText="1&lt; &lt; February 2023 &gt; &gt;1&#xA;Su Mo Tu We Th Fr Sa&#xA;29 30 31 1 2 3 4&#xA;5 6 7 8 9 10 11&#xA;12 13 14 ID 16 17 18&#xA;19 20 21 22 23 24 25&#xA;26 27 28 1 2 3 4" Position="208, 266" ScreenshotGuid="4befc987-cef2-4517-8e5c-8f89853c8522" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
                 </uc:CVCache.CvAnchorRelations>
@@ -943,11 +946,14 @@
           </Sequence>
         </ActivityAction>
       </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+      </p:CVScope.DesignTimeCache>
       <p:CVScope.DesignTimeCacheContainer>
         <uc:CvCacheContainer>
           <uc:CvCacheContainer.Caches>
             <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
-              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - Icon (Main)" Id="c2dc303f-9779-4d15-8225-8537a1869b28" InformativeScreenshot="7f24c2e9b92da7870da41bfce81632ef" LogicalPosition="208, 266" OcrText="1&lt; &lt; October 2022 &gt; &gt;1&#xD;&#xA;Su Mo Tu We Th Fr Sa&#xD;&#xA;25 26 27 28 29 30 1&#xD;&#xA;2 3 4 5 6 7 8&#xD;&#xA;9 10 11 12 13 14 15&#xD;&#xA;16 17 18 19 20 21 22&#xD;&#xA;23 24 25 26 27 28 co&#xD;&#xA;30 31 1 2 3 4 5" Position="208, 266" ScreenshotGuid="fc13c05d-19a1-4354-a6cb-1b933ac7c2d0" ServerVersion="1">
+              <uc:CVCache DataSent="False" DisplayName="Screen CV Get Text - Icon (Main)" Id="c2dc303f-9779-4d15-8225-8537a1869b28" InformativeScreenshot="7f24c2e9b92da7870da41bfce81632ef" LogicalPosition="208, 266" OcrText="1&lt; &lt; October 2022 &gt; &gt;1&#xA;Su Mo Tu We Th Fr Sa&#xA;25 26 27 28 29 30 1&#xA;2 3 4 5 6 7 8&#xA;9 10 11 12 13 14 15&#xA;16 17 18 19 20 21 22&#xA;23 24 25 26 27 28 co&#xA;30 31 1 2 3 4 5" Position="208, 266" ScreenshotGuid="fc13c05d-19a1-4354-a6cb-1b933ac7c2d0" ServerVersion="1">
                 <uc:CVCache.CvAnchorRelations>
                   <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
                 </uc:CVCache.CvAnchorRelations>
@@ -1301,7 +1307,7 @@
         <InArgument x:TypeArguments="x:Int32">[int_index + 5]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="684,410" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5" MaxIterations="[int_index]">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[IN_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="684,410" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5" MaxIterations="[int_index]">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_26">
           <sap:WorkflowViewStateService.ViewState>
@@ -1323,9 +1329,6 @@
           </ui:SendHotkey>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="IN_Month &gt; 0" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
     <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="684,133" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="enter" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
