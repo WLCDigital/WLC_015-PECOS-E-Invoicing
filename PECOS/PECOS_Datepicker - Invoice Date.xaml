@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1194,11781</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1514,11781</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1375,7 +1375,7 @@
         </ActivityFunc>
       </p:CVScope.OCREngine>
       <p:CVScope.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64d15ff5-4c24-4f3b-bb7c-2cf3a191c2a3" InformativeScreenshot="e0d67892844b34c1ea086c62787aa5d9" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64d15ff5-4c24-4f3b-bb7c-2cf3a191c2a3" InformativeScreenshot="e0d67892844b34c1ea086c62787aa5d9" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Calendar - Google Chrome' /&gt;&lt;ctrl name='Calendar* - Google Chrome' role='pane' /&gt;&lt;ctrl idx='8' role='pane' /&gt;" WaitForReady="INTERACTIVE">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

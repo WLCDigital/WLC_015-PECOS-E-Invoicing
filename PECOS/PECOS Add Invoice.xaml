@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1194,13659</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,14536</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Add_Invoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -140,7 +140,7 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,13554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,14431" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="FoundOnPECOS" />
       <Variable x:TypeArguments="s:DateTime" Name="date_email" />
@@ -282,6 +282,52 @@
         </ui:Target>
       </ui:TextExists.Target>
     </ui:TextExists>
+    <If Condition="[FoundOnPECOS]" sap:VirtualizedContainerService.HintSize="738,837" sap2010:WorkflowViewState.IdRef="If_9">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,144" sap2010:WorkflowViewState.IdRef="Sequence_32">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Comment sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ignore - continue to process." />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,511" sap2010:WorkflowViewState.IdRef="Sequence_33">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Comment sap:VirtualizedContainerService.HintSize="334,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Possible screen resolution issue - scroll down to check if PO has actually appeared." />
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="SendHotkey_16" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+            <ui:SendHotkey.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ef00fbcc-e813-48ec-bf27-689de8c38a93">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:SendHotkey.Target>
+          </ui:SendHotkey>
+          <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'H1'" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TextExists_4" Occurrence="1" Result="[FoundOnPECOS]" Text="Order Status">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3f2bea5-8202-4170-87a6-c96b83107de2" InformativeScreenshot="aa1d96cc7badd6c725e7b2b420e49574" Selector="&lt;html app='chrome.exe' title='PECOS Internet Procurement Manager, version 18.0' /&gt;&lt;webctrl name='mainbody' tag='FRAME' /&gt;&lt;webctrl id='docMainSearch' tag='TABLE' /&gt;&lt;webctrl id='searchResultsIFrame' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='srchResultsTbl' tag='TABLE' /&gt;&lt;webctrl id='ordstatus' tableRow='2' tag='TH' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:TextExists.Target>
+          </ui:TextExists>
+        </Sequence>
+      </If.Else>
+    </If>
     <If Condition="[FoundOnPECOS]" sap:VirtualizedContainerService.HintSize="738,11480" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
