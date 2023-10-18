@@ -26,7 +26,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.3.0",
-  "projectVersion": "1.0.1-beta.14",
+  "projectVersion": "1.0.1-beta.18",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -124,6 +124,12 @@
     {
       "filePath": "Tests\\TestEmail.xaml",
       "uniqueId": "19e077b6-e7a7-430b-8f25-33c758f5673a",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Test_Main.xaml",
+      "uniqueId": "a9c9baea-ce59-4f83-ac9f-c0886aff9dea",
       "input": [],
       "output": []
     }

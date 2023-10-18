@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1154,9138</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,9138</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -250,16 +250,11 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
-            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (103,11,100,15)&quot; +&#xA;&quot;Anchor: Text 'We' (145,49,16,9)&quot;]" DesignTimeCacheId="7b1e31f4-839a-4751-8acc-fb32c85f083e" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="165d28b8570bd7091a4b23c25bb12dec" NumberOfScrolls="2" RefreshBefore="True" Result="[DatepickerMonthText]" ScrollDirection="None" Version="V6">
+            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'We' (145,49,16,9) Offset: (-55,-45,130,26)&quot;]" DesignTimeCacheId="537bd18b-7e4e-4301-bd06-d69a10bcf525" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Text" sap:VirtualizedContainerService.HintSize="400,220" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_3" InformativeScreenshot="d05867c0b11934e0ed9a92ddd727c7b3" NumberOfScrolls="2" RefreshBefore="True" Result="[DatepickerMonthText]" ScrollDirection="None" Version="V6">
               <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
-                <uc:CvDescriptor Id="059f5b56-9b3f-492e-857b-9179d58ffb54">
-                  <uc:CvDescriptor.Anchors>
-                    <x:Array Type="uc:CvElementDescriptor">
-                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="145, 49, 16, 9" ElementType="Text" Text="We" />
-                    </x:Array>
-                  </uc:CvDescriptor.Anchors>
+                <uc:CvDescriptor Id="5c3f3659-3ff5-4a6b-9760-302e4a909d35" TargetOffset="-55, -45, 130, 26">
                   <uc:CvDescriptor.Target>
-                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="103, 11, 100, 15" ElementType="AnyWordGroup" />
+                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="145, 49, 16, 9" ElementType="Text" Text="We" />
                   </uc:CvDescriptor.Target>
                 </uc:CvDescriptor>
               </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
