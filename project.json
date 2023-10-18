@@ -1,7 +1,7 @@
 {
   "name": "WLC_015-PECOS-E-Invoicing",
   "description": "Robotic Enterprise Framework",
-  "main": "Main.xaml",
+  "main": "PECOS\\PECOS_Datepicker - Received Date.xaml",
   "dependencies": {
     "Newtonsoft.Json": "[13.0.3]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.21.1]",
@@ -26,7 +26,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.3.0",
-  "projectVersion": "1.0.1-beta.18",
+  "projectVersion": "1.0.1-beta.19",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -130,6 +130,12 @@
     {
       "filePath": "Test_Main.xaml",
       "uniqueId": "a9c9baea-ce59-4f83-ac9f-c0886aff9dea",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "PECOS\\PECOS_Datepicker - Received Date.xaml",
+      "uniqueId": "07c52094-6aa8-44cf-af8b-79e688809ddd",
       "input": [],
       "output": []
     }

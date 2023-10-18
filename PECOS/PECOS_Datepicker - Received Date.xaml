@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1194,9138</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,9296</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Datepicker_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -116,7 +116,7 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="746,9073" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence sap:VirtualizedContainerService.HintSize="746,9231" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="DatePickerMonthCorrect" />
       <Variable x:TypeArguments="x:String" Name="DatepickerMonthText" />
@@ -479,10 +479,10 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,52" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="684,90" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Input Month:  &quot; + Convert.ToDateTime(IN_Date).ToString(&quot;MM&quot;) + &quot;Current Datepicker Month:  &quot; + Convert.ToDateTime(DatepickerMonthText).ToString(&quot;MM&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -1205,37 +1205,20 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="684,1133" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_CalendarTextArray]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="684,1253" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arr_CalendarTextArray]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="528,947" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="528,1067" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,203" sap2010:WorkflowViewState.IdRef="Sequence_29">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[item.ToString + &quot; - &quot; + int_index.ToString]" />
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <If Condition="[item.ToString = IN_Day.ToString OR item.ToString = &quot;CO&quot; OR item.ToString = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="486,645" sap2010:WorkflowViewState.IdRef="If_7">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[item.ToString + &quot; - &quot; + int_index.ToString]" />
+            <If Condition="[item.ToString = IN_Day.ToString OR item.ToString = &quot;CO&quot; OR item.ToString = &quot;0&quot; OR item.ToString = &quot;ID&quot;]" sap:VirtualizedContainerService.HintSize="486,725" sap2010:WorkflowViewState.IdRef="If_7">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="452,463" sap2010:WorkflowViewState.IdRef="Sequence_24">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1288,7 +1271,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+    <Assign sap:VirtualizedContainerService.HintSize="684,82" sap2010:WorkflowViewState.IdRef="Assign_7">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[int_index]</OutArgument>
       </Assign.To>
@@ -1296,7 +1279,7 @@
         <InArgument x:TypeArguments="x:Int32">[int_index + 5]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[IN_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,410" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5" MaxIterations="[int_index]">
+    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[IN_Month &gt; 0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="684,410" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_5" MaxIterations="[int_index]">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
@@ -1319,7 +1302,7 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="510,133" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="684,133" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="22d531a3-6e8f-4129-bd58-788b54388133">
           <ui:Target.TimeoutMS>
@@ -1331,7 +1314,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[arr_CalendarTextArray(0).ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="684,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[arr_CalendarTextArray(0).ToString]" />
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_28">
