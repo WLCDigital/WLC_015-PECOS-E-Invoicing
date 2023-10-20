@@ -8,11 +8,12 @@
     <x:Property sap2010:Annotation.AnnotationText="Transaction ID used for information and logging purposes. Ideally, the ID should be unique for each transaction. " Name="out_TransactionID" Type="OutArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="This variable can be used in case transactions are stored in a DataTable (for example, after being retrieved from a spreadsheet)." Name="io_dt_TransactionData" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="out_tbpFiles" Type="OutArgument(x:Int32)" />
+    <x:Property Name="io_dtReceiptEmails" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1154,3424</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,3424</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -61,6 +62,8 @@
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>UiPath.Shared.Services.Graph.Mail.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.ComponentModel</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -124,9 +127,17 @@
       <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="714,3359" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_ReceiptEmails" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -176,15 +187,9 @@
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderInputDocs" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderUnableToProcess" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderUpload" />
-                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_ApplicationID">
-                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Office365_ApplicationID" />
-                    </OutArgument>
-                    <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Office365_ApplicationSecretValue">
-                      <VisualBasicReference x:TypeArguments="ss:SecureString" ExpressionText="Office365_ApplicationSecretValue" />
-                    </OutArgument>
-                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_TenantID">
-                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="Office365_TennantID" />
-                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_ApplicationID">[Office365_ApplicationID]</OutArgument>
+                    <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Office365_ApplicationSecretValue">[Office365_ApplicationSecretValue]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_Office365_TenantID">[Office365_TennantID]</OutArgument>
                     <OutArgument x:TypeArguments="x:String" x:Key="out_Email_Method" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderActionCenter" />
                     <OutArgument x:TypeArguments="x:String" x:Key="out_FolderPerformer" />
@@ -193,16 +198,27 @@
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Microsoft365\GetEmailByCategory.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="510,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Microsoft365\GetEmailByCategory.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <OutArgument x:TypeArguments="umm:Office365Message[]" x:Key="out_Emails">[EmailMessages]</OutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_Office365_ApplicationID">[Office365_ApplicationID]</InArgument>
-                    <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Office365_ApplicationSecretValue">[Office365_ApplicationSecretValue]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_Office365_TenantID">[Office365_TennantID]</InArgument>
+                    <OutArgument x:TypeArguments="umm:Office365Message[]" x:Key="out_Emails">
+                      <VisualBasicReference x:TypeArguments="umm:Office365Message[]" ExpressionText="EmailMessages" />
+                    </OutArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Office365_ApplicationID">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Office365_ApplicationID" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Office365_ApplicationSecretValue">
+                      <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="Office365_ApplicationSecretValue" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_Office365_TenantID">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Office365_TennantID" />
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_ReceiptEmails">
+                      <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_ReceiptEmails" />
+                    </InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="510,90" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[EmailMessages.ToString]" />
                 <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                   <ui:CommentOut.Body>
-                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,386" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,285" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

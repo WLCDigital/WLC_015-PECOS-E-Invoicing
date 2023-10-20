@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -6,11 +6,12 @@
     <x:Property Name="Office365_TenantID" Type="InArgument(x:String)" />
     <x:Property Name="Office365_ApplicationSecretValue" Type="InArgument(ss:SecureString)" />
     <x:Property Name="Office365_ApplicationID" Type="InArgument(x:String)" />
+    <x:Property Name="io_dt_ReceiptEmails" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>958,16380</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1194,16380</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="148">
@@ -246,14 +247,14 @@
       <Variable x:TypeArguments="x:Boolean" Name="ConfidencePass" />
       <Variable x:TypeArguments="x:String" Name="JsonResults" />
       <Variable x:TypeArguments="x:Int32" Name="QueueItemCount" />
-      <Variable x:TypeArguments="sd2:DataSet" Name="outputDataset" />
+      <Variable x:TypeArguments="sd:DataSet" Name="outputDataset" />
       <Variable x:TypeArguments="p5:ExtractionResult" Name="extractionResults" />
       <Variable x:TypeArguments="p5:ExtractionResult" Name="ValidatedExtractionResults" />
-      <Variable x:TypeArguments="sd2:DataRow" Name="dr_Log" />
+      <Variable x:TypeArguments="sd:DataRow" Name="dr_Log" />
       <Variable x:TypeArguments="x:Boolean" Name="FoundPO" />
       <Variable x:TypeArguments="x:Boolean" Name="totalsMatch" />
       <Variable x:TypeArguments="si:FileInfo" Name="fl" />
-      <Variable x:TypeArguments="sd2:DataTable" Name="dt_Log" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Log" />
       <Variable x:TypeArguments="x:String" Name="str_DocType" />
       <Variable x:TypeArguments="x:String" Name="str_PONo" />
       <Variable x:TypeArguments="x:Boolean" Name="DuplicatePO" />
@@ -307,9 +308,9 @@
             </Assign>
             <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="[fl.FullName]" DocumentText="[text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="830,297" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
               <p:DigitizeDocument.OCREngine>
-                <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc x:TypeArguments="sd1:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
                   <ActivityFunc.Argument1>
-                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                   </ActivityFunc.Argument1>
                   <ActivityFunc.Argument2>
                     <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
@@ -837,11 +838,11 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:MultipleAssign>
                         </Sequence>
-                        <ui:ForEach x:TypeArguments="sd2:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each - Table in Dataset" sap:VirtualizedContainerService.HintSize="678,2033" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[outputDataset.Tables]">
+                        <ui:ForEach x:TypeArguments="sd:DataTable" CurrentIndex="{x:Null}" DisplayName="For Each - Table in Dataset" sap:VirtualizedContainerService.HintSize="678,2033" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[outputDataset.Tables]">
                           <ui:ForEach.Body>
-                            <ActivityAction x:TypeArguments="sd2:DataTable">
+                            <ActivityAction x:TypeArguments="sd:DataTable">
                               <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="sd2:DataTable" Name="table" />
+                                <DelegateInArgument x:TypeArguments="sd:DataTable" Name="table" />
                               </ActivityAction.Argument>
                               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1847" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -1039,8 +1040,8 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PECOS Add Invoice.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PECOS\PECOS Add Invoice.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="sd2:DataSet" x:Key="in_Dataset">
-                                    <VisualBasicValue x:TypeArguments="sd2:DataSet" ExpressionText="outputDataset" />
+                                  <InArgument x:TypeArguments="sd:DataSet" x:Key="in_Dataset">
+                                    <VisualBasicValue x:TypeArguments="sd:DataSet" ExpressionText="outputDataset" />
                                   </InArgument>
                                   <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Found">
                                     <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="FoundPO" />
@@ -1057,6 +1058,12 @@
                                   <OutArgument x:TypeArguments="x:Boolean" x:Key="out_Duplicate">
                                     <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="DuplicatePO" />
                                   </OutArgument>
+                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_ReceiptEmails">
+                                    <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="io_dt_ReceiptEmails" />
+                                  </InOutArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_file">
+                                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="fl.Name" />
+                                  </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -1250,10 +1257,10 @@
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
                                 <ui:AssignOperation.To>
-                                  <OutArgument x:TypeArguments="sd2:DataRow">[dr_Log]</OutArgument>
+                                  <OutArgument x:TypeArguments="sd:DataRow">[dr_Log]</OutArgument>
                                 </ui:AssignOperation.To>
                                 <ui:AssignOperation.Value>
-                                  <InArgument x:TypeArguments="sd2:DataRow">[dt_Log.NewRow]</InArgument>
+                                  <InArgument x:TypeArguments="sd:DataRow">[dt_Log.NewRow]</InArgument>
                                 </ui:AssignOperation.Value>
                               </ui:AssignOperation>
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">

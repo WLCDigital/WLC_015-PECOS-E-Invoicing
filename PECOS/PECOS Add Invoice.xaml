@@ -6,11 +6,14 @@
     <x:Property Name="out_NotAdded" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_email_date" Type="InArgument(s:DateTime)" />
     <x:Property Name="out_Duplicate" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="io_dt_ReceiptEmails" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="in_file" Type="InArgument(x:String)" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1194,14536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1154,14812</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PECOS_Add_Invoice_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="68">
@@ -61,6 +64,7 @@
       <x:String>UiPath.OCR.Contracts</x:String>
       <x:String>UiPath.OmniPage.Activities</x:String>
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -140,11 +144,12 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,14431" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PECOS_Add_Invoice" sap:VirtualizedContainerService.HintSize="800,14667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="FoundOnPECOS" />
       <Variable x:TypeArguments="s:DateTime" Name="date_email" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_sendReceipt" />
+      <Variable x:TypeArguments="x:String" Name="str_receiptEmailAddress" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -156,15 +161,67 @@
         <OutArgument x:TypeArguments="x:Boolean">[bool_sendReceipt]</OutArgument>
       </ui:GetRobotAsset.Value>
     </ui:GetRobotAsset>
-    <If Condition="[bool_sendReceipt = True]" sap:VirtualizedContainerService.HintSize="738,496" sap2010:WorkflowViewState.IdRef="If_8">
+    <If Condition="[bool_sendReceipt = True]" sap:VirtualizedContainerService.HintSize="738,732" sap2010:WorkflowViewState.IdRef="If_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,234" sap2010:WorkflowViewState.IdRef="Sequence_27">
+        <Sequence sap:VirtualizedContainerService.HintSize="526,470" sap2010:WorkflowViewState.IdRef="Sequence_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[String.Concat(&quot;Hi,&quot;, Environment.NewLine,Environment.NewLine,&quot;We've received the following invoice from you and are processing it:&quot;,Environment.NewLine,Environment.NewLine,&quot;PO Number:  &quot;,in_Dataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString, Environment.NewLine,Environment.NewLine,&quot;PO Number:  &quot;,in_Dataset.Tables(0).Rows(0)(&quot;InvoiceNumber&quot;).ToString, Environment.NewLine,Environment.NewLine,&quot;Kind Regards,&quot;,Environment.NewLine,Environment.NewLine,Environment.MachineName.ToString,Environment.NewLine,&quot;Automation Robot&quot;,Environment.NewLine,&quot;West Lothian Council&quot;,Environment.NewLine)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - WLC12345678 - Invoice Received&quot;]" To="kian.mackay@westlothian.gov.uk;">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dt_ReceiptEmails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="484,196" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="item" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[item(&quot;Attachments&quot;).ToString = &quot;*&quot; + in_file +&quot;*&quot;]" sap:VirtualizedContainerService.HintSize="510,497" sap2010:WorkflowViewState.IdRef="If_10">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,235" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[str_receiptEmailAddress]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[item("From").ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Break sap:VirtualizedContainerService.HintSize="434,25" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+          <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[String.Concat(&quot;Hi,&quot;, Environment.NewLine,Environment.NewLine,&quot;We've received the following invoice from you and are processing it:&quot;,Environment.NewLine,Environment.NewLine,&quot;PO Number:  &quot;,in_Dataset.Tables(0).Rows(0)(&quot;OrderNumber&quot;).ToString, Environment.NewLine,Environment.NewLine,&quot;PO Number:  &quot;,in_Dataset.Tables(0).Rows(0)(&quot;InvoiceNumber&quot;).ToString, Environment.NewLine,Environment.NewLine,&quot;Kind Regards,&quot;,Environment.NewLine,Environment.NewLine,Environment.MachineName.ToString,Environment.NewLine,&quot;Automation Robot&quot;,Environment.NewLine,&quot;West Lothian Council&quot;,Environment.NewLine)]" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="484,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot; PECOS E-Invoicing - WLC12345678 - Invoice Received&quot;]" To="[str_receiptEmailAddress]">
             <ui:SendOutlookMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
             </ui:SendOutlookMail.Files>
@@ -1460,7 +1517,7 @@
                     </ui:Target>
                   </ui:SendHotkey.Target>
                 </ui:SendHotkey>
-                <If Condition="[in_Dataset.Tables(&quot;Simple Fields&quot;).Rows(0)(&quot;Type&quot;).ToString.Contains(&quot;Invoice&quot;)]" sap:VirtualizedContainerService.HintSize="586,457" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[in_Dataset.Tables(&quot;Simple Fields&quot;).Rows(0)(&quot;Type&quot;).ToString.ToLower.Contains(&quot;invoice&quot;)]" sap:VirtualizedContainerService.HintSize="586,457" sap2010:WorkflowViewState.IdRef="If_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
